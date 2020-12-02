@@ -3,3 +3,13 @@
 @{
     ViewData["Title"] = "Registrer";
 }
+<div class="container">
+    <form class="form-group">
+        <label class="form-text">Email</label>
+        <input type="text" class="form-control" asp-for="@Model.customer.Email" />
+        <label class="form-text">Password</label>
+        <input type="text" class="form-control" asp-for="@Model.customer.Password" />
+        <input type="submit" placeholder="Login" />
+    </form>
+
+</div>

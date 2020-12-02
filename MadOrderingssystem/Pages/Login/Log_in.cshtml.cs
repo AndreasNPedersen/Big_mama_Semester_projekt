@@ -11,6 +11,7 @@ namespace MadOrderingssystem.Pages.Login
     {
         public void OnGet()
         {
+            HttpContext.Session.Set(HttpContext.Session.Id,)
         }
     }
 }

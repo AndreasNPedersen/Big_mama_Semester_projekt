@@ -15,7 +15,7 @@ namespace MadOrderingssystem.Services
     */
     public class ObjectHandler : IManagement
     {
-        private string filePath = @"";
+        private string filePath = @"C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
         public void Create(Object obj)
         {
 
