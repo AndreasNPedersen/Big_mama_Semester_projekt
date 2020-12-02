@@ -1,25 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-public class Product
+namespace MadOrderingssystem.Models
 {
-	//Skal indeholde
-	//Guid id, Pris, Product Name
-
-	public Product(Guid newId, double pris, string productName)
+	public class Product
 	{
+		//Skal indeholde
+		//Guid id, Pris, Product Name
 
 		Guid _id;
 		double _pris;
 		string _productName;
 
-		//Guid id
-		_id = newId;
+		public Product(Guid newId, double pris, string productName)
+		{
 
-		//Pris
-		_pris = pris;
+			//Guid id
+			_id = newId;
 
-		//ProductName
-		_productName = productName;
+			//Pris
+			_pris = pris;
 
+			//ProductName
+			_productName = productName;
+
+		}
 	}
 }
