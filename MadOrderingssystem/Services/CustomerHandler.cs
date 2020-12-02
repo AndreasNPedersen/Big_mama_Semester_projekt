@@ -19,8 +19,9 @@ namespace MadOrderingssystem.Services
         public void Create(Object obj)
         {
 
-            if (obj is Customer) { }
+            if (obj is Customer) { } // do this and every thing can be handel in one class
             Customer customer = (Customer)obj;
+            customer.ID = Guid.NewGuid();
             JsonRW jsonRW = new JsonRW();
             Dictionary<Guid, Object> dic = jsonRW.ReadJsonFile(filePath);
             dic.Add(customer.ID,customer);

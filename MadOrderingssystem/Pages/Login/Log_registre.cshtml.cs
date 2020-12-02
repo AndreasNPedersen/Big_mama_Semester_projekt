@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MadOrderingssystem.Pages.Login
 {
-    public class log_inModel : PageModel
+    public class Log_registreModel : PageModel
     {
         public void OnGet()
         {
