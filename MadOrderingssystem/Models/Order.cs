@@ -1,24 +1,25 @@
-﻿using System;
+﻿using MadOrderingssystem.Models;
+using System;
+using System.Collections.Generic;
 
 public class Order
 {
-	public Order()
+	//Skal indeholde
+	//Guid id,(List) Products, Customer
+
+	public Order(Customer newCustomer, List<Product> newProducts, Guid newId)
 	{
-		//Skal indeholde
-		//Guid id,(List) Products, Customer
 		List<Product> _products;
 		Customer _customer;
 		Guid _id;
 
-		public Order(Customer newCustomer, List<Product> newProducts, Guid newId)
-		{
-			//Guid id
-			_id = newId;
+		//Guid id
+		_id = newId;
 
-			//Products
-			_products = newProducts;
+		//Products
+		_products = newProducts;
 
-			//Customer
-			_customer = newCustomer;
-		}
+		//Customer
+		_customer = newCustomer;
+	}	
 }
