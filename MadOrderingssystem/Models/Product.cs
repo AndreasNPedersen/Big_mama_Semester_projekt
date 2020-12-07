@@ -9,23 +9,23 @@ namespace MadOrderingssystem.Models
 	{
 		//Mikkel
 		//Skal indeholde
-		//Guid id, Pris, Product Name
+		//Guid id, Price, Product Name
 
-		string _id;
-		double _pris;
-		string _productName;
+		public string Id { get; set; }
+		public double Price { get; set; }
+		public string ProductName { get; set; }
 
-		public Product(string newId, double pris, string productName)
+		public Product(string newId, double newPrice, string productName)
 		{
 
 			//Guid id string
-			_id = newId;
+			Id = newId;
 
-			//Pris
-			_pris = pris;
+			//Price
+			Price = newPrice;
 
 			//ProductName
-			_productName = productName;
+			ProductName = productName;
 
 		}
 	}
