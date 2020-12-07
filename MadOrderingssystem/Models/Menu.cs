@@ -4,25 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
-{/*
+{
     public class Menu : Product
     {
         //Mikkel
         //Skal indeholde
         //Pizzas, Accesories
         
-        List<Pizza> _pizzas;
-        List<Accesory> _accesories;
+        public List<Pizza> Pizzas{get; set;}
+        public List<Accesory> Accesories{get; set;}
         
 
-        public Menu(List<Pizza> newPizzas, List<Accesory> newAccesories, string newId,double pris,string productName) : base(newId,pris,productName)
+        public Menu(List<Pizza> newPizzas, List<Accesory> newAccesories, string newId,double price,string productName) : base(newId,price,productName)
         {
             
-            _pizzas = newPizzas;
-            _accesories = newAccesories;
+            Pizzas = newPizzas;
+            Accesories = newAccesories;
         }
         
 
 
-    }*/
+    }
 }
