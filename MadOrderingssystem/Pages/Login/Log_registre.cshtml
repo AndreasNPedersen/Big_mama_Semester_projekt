@@ -4,12 +4,33 @@
     ViewData["Title"] = "Registrer";
 }
 <div class="container">
-    <form class="form-group">
+    <form class="form-group" method="post">
         <label class="form-text">Email</label>
-        <input type="text" class="form-control" asp-for="@Model.customer.Email" />
+        <input type="text" class="form-control" asp-for="@Model.Customer.Email" />
         <label class="form-text">Password</label>
-        <input type="text" class="form-control" asp-for="@Model.customer.Password" />
-        <input type="submit" placeholder="Login" />
+        <input type="text" class="form-control" asp-for="@Model.Customer.Password" />
+        <label class="form-text">Name</label>
+        <input type="text" class="form-control" asp-for="@Model.Customer.Name" />
+        <label class="form-text">Last name</label>
+        <input type="text" class="form-control" asp-for="@Model.Customer.LastName" />
+        <label class="form-text">Adresse</label>
+        <input type="text" class="form-control" asp-for="@Model.Customer.Address" />
+        <label class="form-text">Post nummer</label>
+        <input type="text" class="form-control" asp-for="@Model.Customer.PostNumber" />
+        <label class="form-text">Telefon nr.</label>
+        <input type="text" class="form-control" asp-for="@Model.Customer.PhoneNumber" />
+        @if (Model.Customer != null)
+        {
+            @if (Model.Customer.Role is Models.Roles.Management)
+            {
+                <label class="form-text">Role</label>
+                <input type="radio" name="Roles" id="Kunde role" value="@Models.Roles.Customer" class="form-control" asp-for="@Model.Customer.Role" />
+                <input type="radio" name="Roles" id="Pizza Bager role" value="@Models.Roles.PizzaBaker" class="form-control" asp-for="@Model.Customer.Role" />
+                <input type="radio" name="Roles" id="Salgs persen role" value="@Models.Roles.SalesPerson" class="form-control" asp-for="@Model.Customer.Role" />
+                <input type="radio" name="Roles" id="Management Role" value="@Models.Roles.Management" class="form-control" asp-for="@Model.Customer.Role" />
+            } 
+        }
+        <input type="submit" value="Opret" placeholder="Login" />
     </form>
 
 </div>

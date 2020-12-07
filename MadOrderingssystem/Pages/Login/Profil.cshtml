@@ -1,0 +1,17 @@
+﻿@page
+@model MadOrderingssystem.Pages.Login.ProfilModel
+@{
+    ViewData["Title"] = "Profil";
+}
+
+<div class="container">
+    <h2 class="text-center">Din profil</h2>
+    <div class="border"></div>
+    <h4>@Model.CustomerSession.Name @Model.CustomerSession.LastName</h4>
+    <i>lavet d. @Model.CustomerSession.Date</i>
+    <p>Bor i @Model.CustomerSession.Address, @Model.CustomerSession.PostNumber</p>
+    <p>Dit Telefonnummer: @Model.CustomerSession.PhoneNumber</p>
+    <p>Din email: @Model.CustomerSession.Email</p>
+    <p>med rolen @Model.CustomerSession.Role</p>
+    <i>ID:@Model.CustomerSession.ID</i>
+</div>

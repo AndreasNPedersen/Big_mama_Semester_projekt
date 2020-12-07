@@ -50,18 +50,5 @@
     "ID": "87496ee0-ea8a-43ab-8950-2a95dba5847c",
     "Address": "sadsad",
     "PhoneNumber": "sad"
-  },
-  "05ac9cf1-5549-452b-935b-460d9ad54a39": {
-    "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:14:46.6896343+01:00",
-    "Name": "asdsad",
-    "LastName": "sad",
-    "Email": "dsa",
-    "PostNumber": 213123,
-    "Password": "adsad",
-    "ID": "05ac9cf1-5549-452b-935b-460d9ad54a39",
-    "Address": "asdsad",
-    "PhoneNumber": "sadwe3321"
   }
 }

@@ -8,14 +8,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MadOrderingssystem.Pages.Login
 {
-    public class log_inModel : PageModel
+    public class ProfilModel : PageModel
     {
-        [BindProperty]
-        public Customer Customer { get; set; }
-
+    public Customer CustomerSession { get; }
         public void OnGet()
         {
-            //HttpContext.Session.Set(HttpContext.Session.Id,);
         }
     }
 }

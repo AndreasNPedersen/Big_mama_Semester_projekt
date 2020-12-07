@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using MadOrderingssystem.Models;
 using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Data
@@ -14,14 +15,15 @@ namespace MadOrderingssystem.Data
     */
     public class JsonRW
     {
-        public Dictionary<Guid,Object> ReadJsonFile(string filePath)
+        public Dictionary<string,object> ReadJsonFile(string filePath)
         {
-            return JsonConvert.DeserializeObject<Dictionary<Guid, Object>>(filePath);
+            string input = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<Dictionary<string, object>>(input);
         }
 
-        public void WriteJsonFile(Dictionary<Guid,Object> dic, string filePath)
+        public void WriteJsonFile(Dictionary<string,object> dic, string filePath)
         {
-           string output = JsonConvert.SerializeObject(dic);
+           string output = JsonConvert.SerializeObject(dic, Formatting.Indented);
            File.WriteAllText(filePath,output);
         }
 
