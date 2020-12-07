@@ -58,7 +58,7 @@ namespace MadOrderingssystem.Services
         {
             JsonRW jsonRW = new JsonRW();
             Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            Dictionary<string, Order> dicC = new Dictionary<string, Order();
+            Dictionary<string, Order> dicC = new Dictionary<string, Order>();
             foreach (Order order in dic.Values)
             {
                 dicC.Add(order.ID, order);

@@ -30,47 +30,48 @@ namespace MadOrderingssystem.Services
 
         public Dictionary<string, Product> FilterDictionary(string filter)
         {
+            //need the filtering of pizza toppings
             JsonRW jsonRW = new JsonRW();
             Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
             Dictionary<string, Product> dicC = new Dictionary<string, Product>();
             foreach (Product product in dic.Values)
             {
-                if (product.ID.ToLower().Contains(filter.ToLower()))
+                if (product.Id.ToLower().Contains(filter.ToLower()))
                 {
                     dicC.Add(product.Id, product);
                 }
-                if (product.customer.ID.ToLower().Contains(filter.ToLower()))
+                if (product.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(order.ID, order);
+                    dicC.Add(product.ProductName, product);
                 }
             }
             return dicC;
         }
 
-        public Order Get(string id)
+        public Product Get(string id)
         {
             JsonRW jsonRW = new JsonRW();
             Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            return (Order)dic[id];
+            return (Product)dic[id];
         }
 
-        public Dictionary<string, Order> GetDictionary()
+        public Dictionary<string, Product> GetDictionary()
         {
             JsonRW jsonRW = new JsonRW();
             Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            Dictionary<string, Order> dicC = new Dictionary<string, Order();
-            foreach (Order order in dic.Values)
+            Dictionary<string, Product> dicC = new Dictionary<string, Product>();
+            foreach (Product product in dic.Values)
             {
-                dicC.Add(order.ID, order);
+                dicC.Add(product.Id, product);
             }
             return dicC;
         }
 
-        public void Update(Order order, string id)
+        public void Update(Product product, string id)
         {
             JsonRW jsonRW = new JsonRW();
             Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            dic[id] = order;
+            dic[id] = product;
             jsonRW.WriteJsonFile(dic, filePath);
         }
     }
