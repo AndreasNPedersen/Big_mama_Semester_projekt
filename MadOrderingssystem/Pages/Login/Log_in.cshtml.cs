@@ -34,6 +34,7 @@ namespace MadOrderingssystem.Pages.Login
             HttpContext.Session.SetString("user",JsonConvert.SerializeObject(Customer));
             return RedirectToPage("/Index");
             }
+            if (!ModelState.IsValid) { return Page(); }
             return Page();
         }
     }

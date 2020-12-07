@@ -1,6 +1,6 @@
 {
   "d369a94c-f1f2-471a-9bf2-d14c57756bf3": {
-    "Role": 2,
+    "Role": 1,
     "CustomerDiscount": true,
     "Date": "2020-12-07T11:34:21.8028668+01:00",
     "Name": "asd",
@@ -11,5 +11,18 @@
     "ID": "d369a94c-f1f2-471a-9bf2-d14c57756bf3",
     "Address": "asd",
     "PhoneNumber": "asd"
+  },
+  "67ccff55-06ff-4a48-b4df-605461ca7ec3": {
+    "Role": 2,
+    "CustomerDiscount": true,
+    "Date": "2020-12-07T14:19:58.7314802+01:00",
+    "Name": "dsa",
+    "LastName": "dsa",
+    "Email": "dsa",
+    "PostNumber": 1111,
+    "Password": "dsa",
+    "ID": "67ccff55-06ff-4a48-b4df-605461ca7ec3",
+    "Address": "dsa",
+    "PhoneNumber": "dsa"
   }
 }

@@ -1,0 +1,19 @@
+﻿body {
+}
+
+#Backgound {
+    background-image: url("/img/backgound.jpg");
+    background-size: cover;
+    padding: 18%;
+    background-position: center;
+    background-repeat:no-repeat;
+    justify-content:center;
+    opacity: 0.85;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color:white;
+}

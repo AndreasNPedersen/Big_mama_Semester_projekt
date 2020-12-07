@@ -13,9 +13,14 @@ namespace MadOrderingssystem.Pages.Login
     public class ProfilModel : PageModel
     {
     public Customer CustomerSession { get; set; }
+    public string exeptionMSG { get; set; }
         public void OnGet()
         {
+            try
+            {
             CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
+            } catch(ArgumentNullException ex) { exeptionMSG = "Du er ikke logget ind"; }
+            
         }
     }
 }
