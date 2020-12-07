@@ -30,7 +30,7 @@ namespace MadOrderingssystem.Pages.Login
             CustomerHandler cH = new CustomerHandler();
             cH.Create(Customer);
 
-            return RedirectToPage("/Index"); // retunere fejl
+            return RedirectToPage("/Index");
         }
     }
 }

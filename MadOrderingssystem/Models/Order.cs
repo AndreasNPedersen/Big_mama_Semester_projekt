@@ -9,21 +9,18 @@ namespace MadOrderingssystem.Models
 	{
 		//Skal indeholde
 		//Guid id,(List) Products, Customer
+		public string ID { get; set; }
 
-		List<Product> _products;
-		Customer _customer;
-		Guid _id;
+		public List<Product> products { get; set; }
+		public Customer customer {get;set;}
 
-		public Order(Customer newCustomer, List<Product> newProducts, Guid newId)
+		public Order(Customer newCustomer, List<Product> newProducts)
 		{
-			//Guid id
-			_id = newId;
-
 			//Products
-			_products = newProducts;
+			products = newProducts;
 
 			//Customer
-			_customer = newCustomer;
+			customer = newCustomer;
 		}
 	}
 }
