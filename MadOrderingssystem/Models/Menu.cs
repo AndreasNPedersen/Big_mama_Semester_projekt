@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
-    public class Menu : Product
+    public class Menu // : Product
     {
         //Mikkel
         //Skal indeholde
         //Pizzas, Accesories
-        
+        /*
         public List<Pizza> Pizzas{get; set;}
         public List<Accesory> Accesories{get; set;}
         
@@ -21,7 +21,7 @@ namespace MadOrderingssystem.Models
             Pizzas = newPizzas;
             Accesories = newAccesories;
         }
-        
+        */
 
 
     }

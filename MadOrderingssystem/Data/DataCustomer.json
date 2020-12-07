@@ -1,67 +1,15 @@
 {
-  "a3fe48f4-0407-4499-93c0-fb4a4c0f3f3b": {
+  "d369a94c-f1f2-471a-9bf2-d14c57756bf3": {
     "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:06:57.6200911+01:00",
-    "Name": "dsf",
-    "LastName": "dsf",
-    "Email": "sedf",
-    "PostNumber": 324,
-    "Password": "dsf",
-    "ID": "a3fe48f4-0407-4499-93c0-fb4a4c0f3f3b",
-    "Address": "dsf",
-    "PhoneNumber": "324"
-  },
-  "22217e49-4069-4674-af7e-d4f9c721adf5": {
-    "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:08:07.1583682+01:00",
-    "Name": "sad",
-    "LastName": "sadasd",
-    "Email": "dssad",
-    "PostNumber": 3214,
-    "Password": "asdsad",
-    "ID": "22217e49-4069-4674-af7e-d4f9c721adf5",
-    "Address": "sad",
-    "PhoneNumber": "ad3214"
-  },
-  "e62f32f3-15d0-490c-aa33-60fab161ddf1": {
-    "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:08:46.1587455+01:00",
-    "Name": "dsfdsf",
-    "LastName": "dsf",
-    "Email": "efds",
-    "PostNumber": 324,
-    "Password": "dsf",
-    "ID": "e62f32f3-15d0-490c-aa33-60fab161ddf1",
-    "Address": "dsfdsf",
-    "PhoneNumber": "dsf"
-  },
-  "87496ee0-ea8a-43ab-8950-2a95dba5847c": {
-    "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:09:44.7959555+01:00",
-    "Name": "sadsad",
-    "LastName": "sadasd",
-    "Email": "dssad",
-    "PostNumber": 213123,
-    "Password": "sadsad",
-    "ID": "87496ee0-ea8a-43ab-8950-2a95dba5847c",
-    "Address": "sadsad",
-    "PhoneNumber": "sad"
-  },
-  "05ac9cf1-5549-452b-935b-460d9ad54a39": {
-    "Role": 2,
-    "CustomerDiscount": null,
-    "Date": "2020-12-05T20:14:46.6896343+01:00",
-    "Name": "asdsad",
-    "LastName": "sad",
-    "Email": "dsa",
-    "PostNumber": 213123,
-    "Password": "adsad",
-    "ID": "05ac9cf1-5549-452b-935b-460d9ad54a39",
-    "Address": "asdsad",
-    "PhoneNumber": "sadwe3321"
+    "CustomerDiscount": true,
+    "Date": "2020-12-07T11:34:21.8028668+01:00",
+    "Name": "asd",
+    "LastName": "asd",
+    "Email": "asd",
+    "PostNumber": 123,
+    "Password": "asd",
+    "ID": "d369a94c-f1f2-471a-9bf2-d14c57756bf3",
+    "Address": "asd",
+    "PhoneNumber": "asd"
   }
 }

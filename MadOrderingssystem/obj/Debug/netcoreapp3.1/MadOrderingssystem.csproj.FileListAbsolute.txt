@@ -28,9 +28,6 @@ C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssyste
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.Views.dll
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.Views.pdb
-C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CoreCompileInputs.cache
-C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\Login\Log_in.cshtml.g.cs
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.Views.pdb
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CopyComplete
@@ -40,3 +37,8 @@ C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\MadOrderingssyste
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\Login\Log_registre.cshtml.g.cs
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\Login\Profil.cshtml.g.cs
 C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\bin\Debug\netcoreapp3.1\Data\DataCustomer.json
+C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\bin\Debug\netcoreapp3.1\Data\DataOrders.json
+C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\bin\Debug\netcoreapp3.1\Data\DataProducts.json
+C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.MvcApplicationPartsAssemblyInfo.cache

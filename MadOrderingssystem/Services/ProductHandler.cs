@@ -13,26 +13,26 @@ namespace MadOrderingssystem.Services
         private string filePath = @"C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\Data\DataProducts.json";
         public void Create(Product product)
         {
-            JsonRW jsonRW = new JsonRW();
+            JsonProduct jsonProduct = new JsonProduct();
             product.Id = Guid.NewGuid().ToString();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
             dic.Add(product.Id, product);
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonProduct.WriteJsonFile(dic, filePath);
         }
 
         public void Delete(string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonProduct jsonProduct = new JsonProduct();
+            Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
             dic.Remove(id);
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonProduct.WriteJsonFile(dic, filePath);
         }
 
         public Dictionary<string, Product> FilterDictionary(string filter)
         {
             //need the filtering of pizza toppings
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonProduct jsonProduct = new JsonProduct();
+            Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
             Dictionary<string, Product> dicC = new Dictionary<string, Product>();
             foreach (Product product in dic.Values)
             {
@@ -50,29 +50,23 @@ namespace MadOrderingssystem.Services
 
         public Product Get(string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            return (Product)dic[id];
+            JsonProduct jsonProduct = new JsonProduct();
+            Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
+            return dic[id];
         }
 
         public Dictionary<string, Product> GetDictionary()
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            Dictionary<string, Product> dicC = new Dictionary<string, Product>();
-            foreach (Product product in dic.Values)
-            {
-                dicC.Add(product.Id, product);
-            }
-            return dicC;
+            JsonProduct jsonProduct = new JsonProduct();
+            return jsonProduct.ReadJsonFile(filePath);
         }
 
         public void Update(Product product, string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonProduct jsonProduct = new JsonProduct();
+            Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
             dic[id] = product;
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonProduct.WriteJsonFile(dic, filePath);
         }
     }
 }
