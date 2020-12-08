@@ -1,0 +1,69 @@
+﻿@page
+@model MadOrderingssystem.Pages.MenuPage.MenuTableModel
+@{
+    ViewData["Title"] = "Menu Management";
+    @using MadOrderingssystem.Models;
+}
+
+<h1 class="text-center">Menu Tabel</h1>
+<p class="text-center"></p>
+<h3>Menuer</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Navn
+            </th>
+            <th>
+                Pris
+            </th>
+            <th>
+                Pizzaer
+            </th>
+            <th>
+                Tilbehør
+            </th>
+            <th>
+                Kontrol
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Menu menu in Model.DicMenu.Values)
+        {
+<tr>
+    <td>
+        @menu.Id
+    </td>
+    <td>
+        @menu.ProductName
+    </td>
+    <td>
+        @menu.Price
+    </td>
+    <td>
+        @foreach(Pizza pizza in menu.Pizzas)
+        {
+            @pizza.ProductName
+        },
+    </td>
+    <td>
+        @foreach (Accessory accessory in menu.Accesories)
+        {
+            @accessory.ProductName
+        },
+    </td>
+    <td>
+        <p>
+            <a asp-page="EditPizza" asp-route-id="@menu.Id">Edit</a> |
+            <a asp-page="DeletePizza" asp-route-id="@menu.Id">Delete</a>
+        </p>
+    </td>
+</tr>}
+    </tbody>
+
+</table>
