@@ -13,25 +13,25 @@ namespace MadOrderingssystem.Services
         private string filePath = @"C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\Data\DataOrders.json";
         public void Create(Order order)
         {
-            JsonRW jsonRW = new JsonRW();
+            JsonOrder jsonOrder = new JsonOrder();
             order.ID = Guid.NewGuid().ToString();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            Dictionary<string, Order> dic = jsonOrder.ReadJsonFile(filePath);
             dic.Add(order.ID,order);
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonOrder.WriteJsonFile(dic, filePath);
         }
 
         public void Delete(string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonOrder jsonOrder = new JsonOrder();
+            Dictionary<string, Order> dic = jsonOrder.ReadJsonFile(filePath);
             dic.Remove(id);
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonOrder.WriteJsonFile(dic, filePath);
         }
 
         public Dictionary<string, Order> FilterDictionary(string filter)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonOrder jsonOrder = new JsonOrder();
+            Dictionary<string, Order> dic = jsonOrder.ReadJsonFile(filePath);
             Dictionary<string, Order> dicC = new Dictionary<string, Order>();
             foreach (Order order in dic.Values)
             {
@@ -49,29 +49,24 @@ namespace MadOrderingssystem.Services
 
         public Order Get(string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            return (Order)dic[id];
+            JsonOrder jsonOrder = new JsonOrder();
+            Dictionary<string, Order> dic = jsonOrder.ReadJsonFile(filePath);
+            return dic[id];
         }
 
         public Dictionary<string, Order> GetDictionary()
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
-            Dictionary<string, Order> dicC = new Dictionary<string, Order>();
-            foreach (Order order in dic.Values)
-            {
-                dicC.Add(order.ID, order);
-            }
-            return dicC;
+            JsonOrder jsonOrder = new JsonOrder();
+            return jsonOrder.ReadJsonFile(filePath);
+            
         }
 
         public void Update(Order order, string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePath);
+            JsonOrder jsonOrder = new JsonOrder();
+            Dictionary<string, Order> dic = jsonOrder.ReadJsonFile(filePath);
             dic[id] = order;
-            jsonRW.WriteJsonFile(dic, filePath);
+            jsonOrder.WriteJsonFile(dic, filePath);
         }
     }
 }

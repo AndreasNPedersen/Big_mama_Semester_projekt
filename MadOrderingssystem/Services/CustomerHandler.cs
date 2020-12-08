@@ -13,7 +13,7 @@ namespace MadOrderingssystem.Services
      * The Data handler
      * -Andreas
     */
-    public class CustomerHandler : IManagement<Customer>
+    public class CustomerHandler
     {
         //change when using other data route
         private string filePathCustomer = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
@@ -21,24 +21,24 @@ namespace MadOrderingssystem.Services
         {
             customer.ID = Guid.NewGuid().ToString();
             customer.Date = DateTime.Now;
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
             dic.Add(customer.ID,customer);
-            jsonRW.WriteJsonFile(dic, filePathCustomer);
+            jsonCustomer.WriteJsonFile(dic, filePathCustomer);
         }
 
         public void Delete(string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
             dic.Remove(id);
-            jsonRW.WriteJsonFile(dic, filePathCustomer);
+            jsonCustomer.WriteJsonFile(dic, filePathCustomer);
         }
 
         public Dictionary<string, Customer> FilterDictionary(string filter)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
             Dictionary<string, Customer> dicC = new Dictionary<string, Customer>();
             foreach (Customer customer in dic.Values)
             {
@@ -66,31 +66,33 @@ namespace MadOrderingssystem.Services
             return dicC;
         }
 
-        public Customer Get(string id)
+        public Customer Get(string email,string password)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
-            return (Customer)dic[id];
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
+            
+            foreach(Customer customer in dic.Values)
+            {
+                if (customer.Email == email && customer.Password == password) { return customer; }
+                
+            }
+            return null;
         }
 
         public Dictionary<string, Customer> GetDictionary()
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
-            Dictionary<string, Customer> dicC = new Dictionary<string, Customer>();
-            foreach (Customer customer in dic.Values)
-            {
-                dicC.Add(customer.ID, customer);
-            }
-            return dicC;
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
+            
+            return dic;
         }
 
         public void Update(Customer customer, string id)
         {
-            JsonRW jsonRW = new JsonRW();
-            Dictionary<string, object> dic = jsonRW.ReadJsonFile(filePathCustomer);
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
             dic[id] = customer;
-            jsonRW.WriteJsonFile(dic, filePathCustomer);
+            jsonCustomer.WriteJsonFile(dic, filePathCustomer);
         }
     }
 }

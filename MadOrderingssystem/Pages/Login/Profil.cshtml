@@ -5,6 +5,9 @@
 }
 
 <div class="container">
+    @if(Model.CustomerSession != null)
+    {
+
     <h2 class="text-center">Din profil</h2>
     <div class="border"></div>
     <h4>@Model.CustomerSession.Name @Model.CustomerSession.LastName</h4>
@@ -14,4 +17,8 @@
     <p>Din email: @Model.CustomerSession.Email</p>
     <p>med rolen @Model.CustomerSession.Role</p>
     <i>ID:@Model.CustomerSession.ID</i>
+    } else
+    {
+        <h1>@Model.exeptionMSG</h1>
+    }
 </div>
