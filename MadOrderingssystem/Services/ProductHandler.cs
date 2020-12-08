@@ -61,11 +61,11 @@ namespace MadOrderingssystem.Services
             return jsonProduct.ReadJsonFile(filePath);
         }
 
-        public void Update(Product product, string id)
+        public void Update(Product newProduct, string id)
         {
             JsonProduct jsonProduct = new JsonProduct();
             Dictionary<string, Product> dic = jsonProduct.ReadJsonFile(filePath);
-            dic[id] = product;
+            dic[id] = newProduct;
             jsonProduct.WriteJsonFile(dic, filePath);
         }
     }

@@ -1,0 +1,33 @@
+﻿@page
+@model MadOrderingssystem.Pages.MenuPage.MainMenuModel
+@{
+    ViewData["Title"] = "Home page";
+    @using MadOrderingssystem.Models;
+}
+      
+<div>
+    <div class="row">
+        <div class="col-sm">
+            One of three columns //filter
+        </div>
+        <div class="col-sm">//Add product her
+            @foreach (Menu menu in Model.DicMenu.Values)
+            {                  
+            <div class="card m-3" style="min-width: 18rem; max-width:30.5%; height:100%">
+                <div class="card-header">
+                    <p>Navn:@menu.ProductName</p>
+                    <p>Pris:@menu.Price</p>
+                    <div class="card-footer text-center">
+                    </div>
+                </div>
+            </div>
+                }
+            
+            }
+        </div>//Menu
+        <div class="col-sm">
+            One of three columns // indkøbskurv
+        </div>
+    </div>
+</div>
+

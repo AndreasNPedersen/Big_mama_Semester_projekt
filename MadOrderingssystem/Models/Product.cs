@@ -16,6 +16,7 @@ namespace MadOrderingssystem.Models
 		public string ProductName { get; set; }
         //public string ImagePath { get; set; }
 
+        public Product() { }//default constructor
         public Product(string newId, double newPrice, string productName)
         {
 
