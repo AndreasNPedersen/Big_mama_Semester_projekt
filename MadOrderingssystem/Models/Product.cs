@@ -14,19 +14,20 @@ namespace MadOrderingssystem.Models
 		public string Id { get; set; }
 		public double Price { get; set; }
 		public string ProductName { get; set; }
+        //public string ImagePath { get; set; }
 
-		public Product(string newId, double newPrice, string productName)
-		{
+        public Product(string newId, double newPrice, string productName)
+        {
 
-			//Guid id string
-			Id = newId;
+            //Guid id string
+            Id = newId;
 
-			//Price
-			Price = newPrice;
+            //Price
+            Price = newPrice;
 
-			//ProductName
-			ProductName = productName;
+            //ProductName
+            ProductName = productName;
 
-		}
-	}
+        }
+    }
 }

@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class ProductHandler:IManagement<Product>
     {
-        private string filePath = @"C:\Users\andre\source\repos\andr12f4\Big_mama_Semester_projekt\Madorderingssystem\Data\DataProducts.json";
+        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataProducts.json";
         public void Create(Product product)
         {
             JsonRW jsonRW = new JsonRW();
