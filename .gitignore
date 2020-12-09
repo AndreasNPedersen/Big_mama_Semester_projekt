@@ -25,3 +25,6 @@ MadOrderingssystem/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_ValidationScripts
 MadOrderingssystem/obj/MadOrderingssystem.csproj.nuget.dgspec.json
 MadOrderingssystem/obj/project.assets.json
 MadOrderingssystem/obj/project.nuget.cache
+MadOrderingssystem/.vs/MadOrderingssystem/DesignTimeBuild/.dtbcache.v2
+MadOrderingssystem/.vs/MadOrderingssystem/v16/.suo
+MadOrderingssystem/obj/Debug/netcoreapp3.1/MadOrderingssystem.csprojAssemblyReference.cache

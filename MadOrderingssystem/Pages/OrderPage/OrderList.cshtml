@@ -22,6 +22,9 @@
                 Kunde
             </th>
             <th>
+                Total pris (DKK)
+            </th>
+            <th>
                 Kontrol
             </th>
         </tr>
@@ -29,21 +32,26 @@
     <tbody>
         @foreach (Order order in Model.OrderListTable.Values)
         {
-            <tr>
-                <td>
-                    @order.ID
-                </td>
-                <td>
-                   
-                </td>
-               
-                <td>
-                    <p>
-                        <a asp-page="EditUser" asp-route-id="@order.ID">Redigere</a> |
-                        <a asp-page="DeleteUser" asp-route-id="@order.ID">Slet</a>
-                    </p>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @order.ID
+            </td>
+            <td>
+                @foreach (Product products in order.products)
+                {
+                    @products.ProductName
+                },
+            </td>
+            <td>
+                @order.TotalPrice
+            </td>
+            <td>
+                <p>
+                    <a asp-page="EditUser" asp-route-id="@order.ID">Redigere</a> |
+                    <a asp-page="DeleteUser" asp-route-id="@order.ID">Slet</a>
+                </p>
+            </td>
+        </tr>
         }
     </tbody>
 

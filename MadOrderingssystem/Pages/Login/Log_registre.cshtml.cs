@@ -18,8 +18,6 @@ namespace MadOrderingssystem.Pages.Login
         [BindProperty]
         public Customer Customer { get; set; }
         
-
-
         public void OnGet()
         {
             try

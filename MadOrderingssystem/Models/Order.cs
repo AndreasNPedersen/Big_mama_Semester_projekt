@@ -14,8 +14,14 @@ namespace MadOrderingssystem.Models
 
 		public List<Product> products { get; set; }
 		public Customer customer {get;set;}
+		public double TotalPrice { get; set; }
 
-		public Order() { } //default constructor
+		public Order() {
+		foreach(Product product in products)
+            {
+				TotalPrice = TotalPrice + product.Price;
+            }
+		} //default constructor
 
 		public Order(Customer newCustomer, List<Product> newProducts)
 		{
