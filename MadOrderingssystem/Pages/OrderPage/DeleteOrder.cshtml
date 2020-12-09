@@ -1,6 +1,33 @@
 ﻿@page
 @model MadOrderingssystem.Pages.OrderPage.DeleteOrderModel
 @{
-    ViewData["Title"] = "Login Management";
-    @using MadOrderingssystem.Models;
+    ViewData["Title"] = "Slet Order";
 }
+
+<div class="container">
+    <form class="form-group" method="post">
+        <label class="form-text">Id</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Order.ID" />
+        <span asp-validation-for="@Model.Order.ID" class="text-danger"></span>
+
+        <label class="form-text">Kunde</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Order.customer" />
+        <span asp-validation-for="@Model.Order.customer" class="text-danger"></span>
+
+        <label class="form-text">Produkter</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Order.products" />
+        <span asp-validation-for="@Model.Order.products" class="text-danger"></span>
+
+        <label class="form-text">Total pris</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Order.TotalPrice" />
+        <span asp-validation-for="@Model.Order.TotalPrice" class="text-danger"></span>
+
+        <input type="hidden" class="form-control" asp-for="@Model.Order.ID" />
+
+        <div style="padding:1rem;"></div>
+        <input type="submit" class="btn btn-success float-right" value="Slet order" placeholder="Placeholder" style="padding:1rem;" />
+    </form>
+    <div>
+        <a asp-page="OrderList">Tilbage til order listen</a>
+    </div>
+</div>
