@@ -22,25 +22,28 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public void OnGet()
         {
+        
             ProductHandler pH = new ProductHandler();
-            DicProduct=pH.GetDictionary();
-            foreach(Product product in DicProduct.Values)
+            DicProduct = pH.GetDictionary();
+            foreach (Product product in DicProduct.Values)
             {
                 if (product is Pizza)
                 {
                     Pizza pizza = (Pizza)product;
-                    DicPizza.Add(pizza.Id,pizza);
+                    DicPizza.Add(pizza.Id, pizza);
                 }
                 if (product is Menu)
                 {
-
+                    Menu menu = (Menu)product;
+                    DicMenu.Add(menu.Id, menu);
                 }
                 if (product is Accessory)
                 {
-
+                    Accessory accessory = (Accessory)product;
+                    DicAccessories.Add(accessory.Id, accessory);
                 }
-                
             }
+            
         }
 
     }
