@@ -1,0 +1,88 @@
+﻿@page
+@model MadOrderingssystem.Pages.Login.LoginListModel
+@{
+    ViewData["Title"] = "Login Management";
+    @using MadOrderingssystem.Models;
+}
+
+<h1 class="text-center">User Tabel</h1>
+<p class="text-center"></p>
+<h3>Users</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Navn
+            </th>
+            <th>
+                Efternavn
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefonnummer
+            </th>
+            <th>
+                Adresse
+            </th>
+            <th>
+                Postnummer
+            </th>
+            <th>
+                Registrerings dato
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Kontrol
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Customer customer in Model.DicC.Values)
+        {
+        <tr>
+            <td>
+                @customer.ID
+            </td>
+            <td>
+                @customer.Name
+            </td>
+            <td>
+                @customer.LastName
+            </td>
+            <td>
+                @customer.Email
+            </td>
+            <td>
+                @customer.PhoneNumber
+            </td>
+            <td>
+                @customer.Address
+            </td>
+            <td>
+                @customer.PostNumber
+            </td>
+            <td>
+                @customer.Date.ToString()
+            </td>
+            <td>
+                @customer.Password
+            </td>
+            <td>
+                <p>
+                    <a asp-page="EditUser" asp-route-id="@customer.ID">Redigere</a> |
+                    <a asp-page="DeleteUser" asp-route-id="@customer.ID">Slet</a>
+                </p>
+            </td>
+        </tr>
+}
+    </tbody>
+
+</table>

@@ -16,7 +16,7 @@ namespace MadOrderingssystem.Services
     public class CustomerHandler
     {
         //change when using other data route
-        private string filePathCustomer = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
+        private string filePathCustomer = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
         public void Create(Customer customer)
         {
             customer.ID = Guid.NewGuid().ToString();
@@ -77,6 +77,13 @@ namespace MadOrderingssystem.Services
                 
             }
             return null;
+        }
+
+        public Customer Get(string ID)
+        {
+            JsonCustomer jsonCustomer = new JsonCustomer();
+            Dictionary<string, Customer> dic = jsonCustomer.ReadJsonFile(filePathCustomer);
+            return dic[ID];
         }
 
         public Dictionary<string, Customer> GetDictionary()

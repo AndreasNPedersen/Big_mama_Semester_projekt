@@ -1,4 +1,15 @@
 ﻿@page
 @model MadOrderingssystem.Pages.MenuPage.DeletePageModel
 @{
+    ViewData["Title"] = "Menu Delete";
 }
+<div class="container">
+
+<h1 class="text-center"> Er du sikker på at slette Produktet?</h1>
+<form class="form-group" method="post">
+<input class="form-control btn-danger" type="submit" >Ja</input>
+</form>
+
+    <a asp-page="MenuTable">Tilbage til menu listen</a>
+
+</div>

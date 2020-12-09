@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MadOrderingssystem.Models;
 using MadOrderingssystem.Services;
 using Microsoft.AspNetCore.Http;
@@ -11,38 +8,33 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.Login
 {
-    public class Log_registreModel : PageModel
+    public class DeleteUserModel : PageModel
     {
         [BindProperty]
         public Customer CustomerSession { get; set; }
+
         [BindProperty]
         public Customer Customer { get; set; }
-        
 
 
-        public void OnGet()
+        public IActionResult OnGet(string id)
         {
+            CustomerHandler cH = new CustomerHandler();
+            Customer = cH.Get(id);
             try
             {
                 CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
             }
             catch (ArgumentNullException ex) { }
-
+            return Page();
         }
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
-            {
-                if (Customer.Role == 0) { Customer.Role = Roles.Customer; Customer.CustomerDiscount = true; }
+            CustomerHandler cH = new CustomerHandler();
+            cH.Delete(Customer.ID);
 
-                CustomerHandler cH = new CustomerHandler();
-                cH.Create(Customer);
-
-                return RedirectToPage("/Index");
-            }
-            return Page();
-                      
+            return RedirectToPage("LoginList");
         }
     }
 }

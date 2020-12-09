@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\andr12f4\\Big_mama_Semester_projekt\\Madorderingssystem\\MadOrderingssystem.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Desktop\\Zealand  Datamatiker\\1 Semester\\Semester Projekt\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
       "projectName": "MadOrderingssystem",
-      "projectPath": "C:\\Users\\andre\\source\\repos\\andr12f4\\Big_mama_Semester_projekt\\Madorderingssystem\\MadOrderingssystem.csproj",
+      "projectPath": "C:\\Users\\andre\\Desktop\\Zealand  Datamatiker\\1 Semester\\Semester Projekt\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\source\\repos\\andr12f4\\Big_mama_Semester_projekt\\Madorderingssystem\\obj\\",
+      "outputPath": "C:\\Users\\andre\\Desktop\\Zealand  Datamatiker\\1 Semester\\Semester Projekt\\Big_mama_Semester_projekt\\MadOrderingssystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

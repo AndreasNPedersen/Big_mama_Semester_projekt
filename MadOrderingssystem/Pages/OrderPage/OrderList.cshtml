@@ -1,0 +1,50 @@
+﻿@page
+@model MadOrderingssystem.Pages.OrderPage.OrderListModel
+@{
+    ViewData["Title"] = "Login Management";
+    @using MadOrderingssystem.Models;
+}
+
+<h1 class="text-center">Order Tabel</h1>
+<p class="text-center"></p>
+<h3>Orders</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Produkter
+            </th>
+            <th>
+                Kunde
+            </th>
+            <th>
+                Kontrol
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Order order in Model.OrderListTable.Values)
+        {
+            <tr>
+                <td>
+                    @order.ID
+                </td>
+                <td>
+                   
+                </td>
+               
+                <td>
+                    <p>
+                        <a asp-page="EditUser" asp-route-id="@order.ID">Redigere</a> |
+                        <a asp-page="DeleteUser" asp-route-id="@order.ID">Slet</a>
+                    </p>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
