@@ -1,0 +1,17 @@
+{
+  "a1390945-7b9f-4d54-a9d6-3952b46e455b": {
+    "Id": "a1390945-7b9f-4d54-a9d6-3952b46e455b",
+    "Price": 123.0,
+    "ProductName": "sssss"
+  },
+  "d5726e76-8a48-4a24-8119-80584fbfa940": {
+    "Id": "d5726e76-8a48-4a24-8119-80584fbfa940",
+    "Price": 50.0,
+    "ProductName": "Pepperoni"
+  },
+  "fcfb7823-e5f2-4a08-8e26-6fc725511413": {
+    "Id": "fcfb7823-e5f2-4a08-8e26-6fc725511413",
+    "Price": 50.0,
+    "ProductName": "Skinke"
+  }
+}

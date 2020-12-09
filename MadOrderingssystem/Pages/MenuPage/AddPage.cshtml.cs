@@ -31,18 +31,19 @@ namespace MadOrderingssystem.Pages.MenuPage
 
 
         public IActionResult OnPost()
-            {
-               
-              
+        {
 
-               ProductHandler ProductHandler = new ProductHandler();
+            if (ModelState.IsValid)
+            {
+
+                ProductHandler ProductHandler = new ProductHandler();
                 ProductHandler.Create(Product);
 
                 return RedirectToPage("/Index");
 
             }
+            return Page();
 
-        
-        
+        }
     }
 }
