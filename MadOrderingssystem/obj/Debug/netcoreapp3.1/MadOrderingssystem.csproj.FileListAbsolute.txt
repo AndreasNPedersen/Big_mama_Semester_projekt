@@ -97,10 +97,6 @@ C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\AddOrder.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\DeleteOrder.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\EditOrder.cshtml.g.cs
-<<<<<<< HEAD
-C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPage.cshtml.g.cs
-C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddAccessoryPage.cshtml.g.cs
-=======
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataCustomer.json
@@ -154,7 +150,3 @@ C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.genruntimeconfig.cache
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CopyComplete
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CoreCompileInputs.cache
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.MvcApplicationPartsAssemblyInfo.cache
->>>>>>> af5cf71cf9c72b9a99c6b508cad06243565851b6

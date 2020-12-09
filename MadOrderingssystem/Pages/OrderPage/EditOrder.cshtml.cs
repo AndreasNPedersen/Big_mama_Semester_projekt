@@ -19,7 +19,7 @@ namespace MadOrderingssystem.Pages.OrderPage
         [BindProperty]
         public Order Order { get; set; }
 
-
+        public List<Product> ProductOrderList { get; set; }
 
         public void OnGet(string id)
         {
@@ -41,6 +41,7 @@ namespace MadOrderingssystem.Pages.OrderPage
                 return Page();
             }
 
+            Order.products = ProductOrderList;
             OrderHandler oH = new OrderHandler();
             oH.Update(Order, Order.ID);
 

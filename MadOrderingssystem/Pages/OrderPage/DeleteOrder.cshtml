@@ -1,7 +1,8 @@
-﻿@page
+﻿@page "{id}"
 @model MadOrderingssystem.Pages.OrderPage.DeleteOrderModel
 @{
     ViewData["Title"] = "Slet Order";
+    @using MadOrderingssystem.Models;
 }
 
 <div class="container">
@@ -14,18 +15,25 @@
         <input type="text" readonly class="form-control" asp-for="@Model.Order.customer" />
         <span asp-validation-for="@Model.Order.customer" class="text-danger"></span>
 
+
         <label class="form-text">Produkter</label>
-        <input type="text" readonly class="form-control" asp-for="@Model.Order.products" />
+        <ul>
+            @foreach (Product product in Model.Order.products)
+            {
+                <li>@product.ProductName </li>
+            }
+        </ul>
+        <input type="hidden" readonly class="form-control" asp-for="@Model.Order.products" />
         <span asp-validation-for="@Model.Order.products" class="text-danger"></span>
 
-        <label class="form-text">Total pris</label>
+        <label class="form-text">Total pris (DKK)</label>
         <input type="text" readonly class="form-control" asp-for="@Model.Order.TotalPrice" />
         <span asp-validation-for="@Model.Order.TotalPrice" class="text-danger"></span>
 
         <input type="hidden" class="form-control" asp-for="@Model.Order.ID" />
 
         <div style="padding:1rem;"></div>
-        <input type="submit" class="btn btn-success float-right" value="Slet order" placeholder="Placeholder" style="padding:1rem;" />
+        <input type="submit" class="btn btn-success float-right" value="Slet order" placeholder="Delete" style="padding:1rem;" />
     </form>
     <div>
         <a asp-page="OrderList">Tilbage til order listen</a>
