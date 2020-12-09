@@ -10,7 +10,6 @@ namespace MadOrderingssystem.Pages.OrderPage
 {
     public class DeleteOrderModel : PageModel
     {
-        [BindProperty]
         public Customer CustomerSession { get; set; }
 
         [BindProperty]

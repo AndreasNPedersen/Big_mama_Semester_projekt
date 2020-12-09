@@ -150,6 +150,3 @@ C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.genruntimeconfig.cache
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CopyComplete
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CoreCompileInputs.cache
-C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.MvcApplicationPartsAssemblyInfo.cache

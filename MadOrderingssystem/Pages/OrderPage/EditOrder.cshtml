@@ -1,6 +1,27 @@
-﻿@page
+﻿@page "{id}"
 @model MadOrderingssystem.Pages.OrderPage.EditOrderModel
 @{
-    ViewData["Title"] = "Login Management";
+    ViewData["Title"] = "Redigere order";
     @using MadOrderingssystem.Models;
 }
+
+<div class="container">
+    <form class="form-group" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <label class="form-text">Produkter</label>
+        @foreach (Product product in Model.Order.products)
+        {
+            <p>@product.ProductName</p>
+            <input type="checkbox" class="form-control" asp-for="@Model.ProductOrderList.Add(product)" />
+        }
+
+        <input type="hidden" asp-for="@Model.Order.ID" />
+        <input type="hidden" asp-for="@Model.Order.TotalPrice" />
+
+        <input type="submit" class="btn btn-success float-right" value="Redigere order" placeholder="Edit" style="padding:1rem;" />
+    </form>
+    <div>
+        <a asp-page="OrderList">Tilbage til order listen</a>
+    </div>
+
+</div>

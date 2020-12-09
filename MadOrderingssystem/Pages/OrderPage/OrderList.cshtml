@@ -37,18 +37,20 @@
                 @order.ID
             </td>
             <td>
-                @foreach (Product products in order.products)
-                {
-                    @products.ProductName
-                },
+                <ul>
+                    @foreach (Product products in order.products)
+                    {
+                        <li>@products.ProductName</li>
+                    }
+                </ul>
             </td>
             <td>
                 @order.TotalPrice
             </td>
             <td>
                 <p>
-                    <a asp-page="EditUser" asp-route-id="@order.ID">Redigere</a> |
-                    <a asp-page="DeleteUser" asp-route-id="@order.ID">Slet</a>
+                    <a asp-page="EditOrder" asp-route-id="@order.ID">Redigere</a> |
+                    <a asp-page="DeleteOrder" asp-route-id="@order.ID">Slet</a>
                 </p>
             </td>
         </tr>
