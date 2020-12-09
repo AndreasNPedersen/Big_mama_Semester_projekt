@@ -24,7 +24,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Menu/Menu">Menu</a>
                         </li>
-                        <li id="dropdownmenu"class="btn-group">
+                        <li id="dropdownmenu" class="btn-group">
                             <button type="button" class="btn btn-light" href="/Login/log_in">Login</button>
                             <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Toggle Dropdown</span>
@@ -41,47 +41,39 @@
             </div>
         </nav>
     </header>
+
     <div>
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3r">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - MadOrderingssystem - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-                                                                                   @*I stedet for det oven på*@
-        @*<div class="container">
-            <div class="row">
-                <div class="column side">
-                    <h2>Copyright</h2>
-                    <p>
-                        &copy; 2020 - MadOrderingssystem<br />
-                        <a asp-area="" asp-page="/Privacy">Privacy</a>
-                    </p>
-                </div>
-
-                <div class="column middle">
-                    <h2>Kontakt</h2>
-                    <p>
-                        Tlf. 40124003
-                        <br />
-                        Mail. BigMammaAtMail.dk
-                    </p>
-                </div>
-
-                <div class="column side">
-                    <h2>Åbningstider</h2>
-                    <p>
-                        Frederiksværksgade 4 - 3400 Hillerød<br />
-                        Mandag lukket<br />
-                        Tirsdag - Fredag 11:00-21.00<br />
-                        Lørdag - Søndag 12:00-21:00
-                    </p>
-                </div>
+    
+    <footer class="container border-top text-muted">
+        <div class="row">
+            <div class="col-sm">
+                <h5>Copyright</h5>
+                &copy; 2012 Big Mamma Gastronomia. All rights reserved.
             </div>
-        </div>*@
+            <div class="col-sm">
+                <h5>Kontakt</h5>
+                <p>
+                    Tlf. 40124003<br />
+
+                    Mail. BigMammaAtMail.dk
+                </p>
+            </div>
+            <div class="col-sm">
+                <h5>Åbningstider</h5>
+                <p>
+                    Frederiksværksgade 4 - 3400 Hillerød<br />
+                    Mandag lukket <br />
+                    Tirsdag - Fredag 11:00-21.00 <br />
+                    Lørdag - Søndag 12:00-21:00
+                </p>
+            </div>
+        </div>
+
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

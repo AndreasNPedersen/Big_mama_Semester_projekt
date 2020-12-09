@@ -3,34 +3,40 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<!DOCTYPE html>
-<html>
+
 <head>
     <link rel="stylesheet" href="~/css/index.css" />
 </head>
-<body>
 
-    <div id="Backgound" class="header">
+
+    <div id="Backgound" class="text-center">
         <h1>Big Mamma Gastronomia</h1>
-        <button>Online Bestilling</button>
-    </div>
-
-    <div class="image-txt-container">
-        <div style="float: left; width:300px">
-            @*Skal nok skiftes til % i width*@
-            Lidt om firmaet text text text
-        </div>
-        <img src="~/img/backgound.jpg" style="float: right; width:300px"> @*Skal nok skiftes til % i width*@
+        <button class="btn-outline-success">Online Bestilling</button>
     </div>
 
     <div class="container">
-        <div class="image-txt-container">
-            <img src="~/img/backgound.jpg" style="float:left; width:300px"> @*Skal nok skiftes til % i width*@
-            <div style="float:right; width:300px">
-                @*Skal nok skiftes til % i width*@
-                Hvordan/hvorfor produkt text text
+        <div id="Mellemrum" class="justify-content-center"></div>
+
+        <div class="row" style="padding-top:0.5rem;">
+            <div class="col-sm">
+                <p>Lidt om firmaet</p>
+            </div>
+            <div class="col-sm">
+                <img src="~/img/mad1.jpg" id="Picture1" />
             </div>
         </div>
+        <div id="Mellemrum" class="justify-content-center"></div>
+        <div class="row" style="padding-top:0.5rem;">
+            <div class="col-sm">
+                <img src="~/img/mad5.jpg" id="Picture1" />
+            </div>
+            <div class="col-sm">
+                <p>mere om firmaet</p>
+            </div>
+        </div>
+        <div id="Mellemrum" class="justify-content-center"></div>
     </div>
-</body>
-</html>
+
+
+
+
