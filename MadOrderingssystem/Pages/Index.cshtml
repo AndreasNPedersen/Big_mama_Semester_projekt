@@ -3,13 +3,34 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/index.css" />
 </head>
-
 <body>
-    <div id="Backgound">
-        <h1> Big Mamma Gastronomia </h1>
+
+    <div id="Backgound" class="header">
+        <h1>Big Mamma Gastronomia</h1>
+        <button>Online Bestilling</button>
+    </div>
+
+    <div class="image-txt-container">
+        <div style="float: left; width:300px">
+            @*Skal nok skiftes til % i width*@
+            Lidt om firmaet text text text
+        </div>
+        <img src="~/img/backgound.jpg" style="float: right; width:300px"> @*Skal nok skiftes til % i width*@
+    </div>
+
+    <div class="container">
+        <div class="image-txt-container">
+            <img src="~/img/backgound.jpg" style="float:left; width:300px"> @*Skal nok skiftes til % i width*@
+            <div style="float:right; width:300px">
+                @*Skal nok skiftes til % i width*@
+                Hvordan/hvorfor produkt text text
+            </div>
+        </div>
     </div>
 </body>
+</html>

@@ -1,19 +1,64 @@
-﻿body {
-}
-
+﻿/* Style for the background*/
 #Backgound {
     background-image: url("/img/backgound.jpg");
     background-size: cover;
     padding: 18%;
     background-position: center;
-    background-repeat:no-repeat;
-    justify-content:center;
+    background-repeat: no-repeat;
+    justify-content: center;
     opacity: 0.85;
 }
+
+/* Style the h1 line*/
 h1 {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    color:white;
+    color: white;
+}
+
+/* Style the body*/
+body {
+    background-color: darkgrey;                                   /*Skal skiftes til et billede muligvis*/
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+}
+
+/* Create columns that floats next to each other */
+/*.column {
+    float: left;
+    padding: 10px;
+}*/
+
+/* Left and right column */
+/*.column.side {
+    width: 25%;
+}*/
+                                                       /*Hører til 3 columns i footer i stedet nu, mangler og rykkes som jeg skulle gemme*/
+/* Middle column */
+/*.column.middle {
+    width: 50%;
+}*/
+
+.image-txt-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
