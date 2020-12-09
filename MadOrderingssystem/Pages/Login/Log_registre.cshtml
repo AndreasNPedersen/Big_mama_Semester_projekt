@@ -24,17 +24,17 @@
         </div>
         <div class="form-group">
             <label class="form-text">Post nummer</label>
-            <input asp-for="@Model.Customer.PostNumber" class="form-control" />
+            <input type="range" min="4" max="4" asp-for="@Model.Customer.PostNumber" class="form-control" />
             <span asp-validation-for="@Model.Customer.PostNumber" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label class="form-text">Telefon nr.</label>
-            <input asp-for="@Model.Customer.PhoneNumber" class="form-control" />
+            <input type="tel" asp-for="@Model.Customer.PhoneNumber" class="form-control" />
             <span asp-validation-for="@Model.Customer.PhoneNumber" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label class="form-text">Email</label>
-            <input asp-for="@Model.Customer.Email" class="form-control" />
+            <input type="email" asp-for="@Model.Customer.Email" class="form-control" />
             <span asp-validation-for="@Model.Customer.Email" class="text-danger"></span>
         </div>
         <div class="form-group">

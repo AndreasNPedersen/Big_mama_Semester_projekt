@@ -94,3 +94,6 @@ C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\Login\EditUser.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\Login\LoginList.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\OrderList.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\AddOrder.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\DeleteOrder.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\OrderPage\EditOrder.cshtml.g.cs

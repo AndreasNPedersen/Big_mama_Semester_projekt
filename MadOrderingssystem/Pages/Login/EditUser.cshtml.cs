@@ -13,7 +13,7 @@ namespace MadOrderingssystem.Pages.Login
 {
     public class EditUserModel : PageModel
     {
-        [BindProperty]
+        
         public Customer CustomerSession { get; set; }
         [BindProperty]
         public Customer Customer { get; set; }

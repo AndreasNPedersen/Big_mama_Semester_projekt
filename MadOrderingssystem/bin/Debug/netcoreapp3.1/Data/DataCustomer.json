@@ -6,10 +6,10 @@
     "Password": "asd",
     "Address": "asd",
     "PhoneNumber": "asd",
+    "PostNumber": 123,
     "ID": "d369a94c-f1f2-471a-9bf2-d14c57756bf3",
     "Role": 1,
     "CustomerDiscount": true,
-    "PostNumber": 123,
     "Date": "2020-12-07T11:34:21.8028668+01:00"
   },
   "d3475cb3-b42b-4709-b420-19a5176265b1": {
@@ -19,10 +19,10 @@
     "Password": "sad",
     "Address": "asdasd",
     "PhoneNumber": "asdasd",
+    "PostNumber": 4000,
     "ID": "d3475cb3-b42b-4709-b420-19a5176265b1",
     "Role": 2,
     "CustomerDiscount": true,
-    "PostNumber": 4000,
     "Date": "2020-12-08T13:18:01"
   },
   "716f2e8b-7fda-46db-8c0b-d43f4f158942": {
@@ -32,10 +32,36 @@
     "Password": "123",
     "Address": "Roslkilde",
     "PhoneNumber": "20994505",
+    "PostNumber": 4000,
     "ID": "716f2e8b-7fda-46db-8c0b-d43f4f158942",
     "Role": 2,
     "CustomerDiscount": true,
-    "PostNumber": 4000,
     "Date": "2020-12-08T14:41:11.2696662+01:00"
+  },
+  "a2217262-f850-434b-beb1-42d3ebd64acd": {
+    "Name": "Andreas",
+    "LastName": "odser",
+    "Email": "asd@he.com",
+    "Password": "123",
+    "Address": "Roskilde",
+    "PhoneNumber": "20994505",
+    "PostNumber": 4000,
+    "ID": "a2217262-f850-434b-beb1-42d3ebd64acd",
+    "Role": 2,
+    "CustomerDiscount": true,
+    "Date": "2020-12-09T10:10:27.6263225+01:00"
+  },
+  "24d08733-be86-4362-8547-e2c6525dbb18": {
+    "Name": "Mikkel",
+    "LastName": "Jensen",
+    "Email": "asd@hotmai.com",
+    "Password": "asd",
+    "Address": "Roskilde",
+    "PhoneNumber": "2099213",
+    "PostNumber": 4000,
+    "ID": "24d08733-be86-4362-8547-e2c6525dbb18",
+    "Role": 2,
+    "CustomerDiscount": true,
+    "Date": "2020-12-09T10:14:11.4693008+01:00"
   }
 }

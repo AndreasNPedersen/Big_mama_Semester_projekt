@@ -13,8 +13,9 @@ namespace MadOrderingssystem.Pages.Login
 {
     public class Log_registreModel : PageModel
     {
-        [BindProperty]
+        
         public Customer CustomerSession { get; set; }
+
         [BindProperty]
         public Customer Customer { get; set; }
         

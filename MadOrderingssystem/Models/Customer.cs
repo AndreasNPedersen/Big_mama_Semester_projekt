@@ -14,17 +14,24 @@ namespace MadOrderingssystem.Models
     
     public class Customer
     {
-        //[Required,MaxLength(50)]
+        [Required,MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string Name { get; set; }
+        [Required, MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string LastName { get; set; }
+        [Required, MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string Email { get; set; }
+        [Required, MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string Password { get; set; }
+        [Required, MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string Address { get; set; }
+        [Required, MaxLength(50, ErrorMessage = "Du har ikke skrevet noget, eller har for mange tegn")]
         public string PhoneNumber { get; set; }
+        [Required]
+        public int PostNumber { get; set; }
+
         public string ID { get; set; }
         public Roles Role { get; set; }
         public bool CustomerDiscount {get;set;}
-        public int PostNumber { get; set; }
         public DateTime Date { get; set; }
 
         public Customer() { }
