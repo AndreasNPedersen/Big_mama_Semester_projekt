@@ -1,0 +1,38 @@
+﻿@page
+@model MadOrderingssystem.Pages.MenuPage.AddAccessoryPageModel
+@{
+    ViewData["Title"] = "Registrer";
+}
+
+<div class="container">
+        @if (Model.CustomerSession != null)
+        {
+            @if (Model.CustomerSession.Role == Models.Roles.Management)
+            {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label class="form-text">Name</label>
+                    <input asp-for="@Model.Accessory.ProductName" class="form-control" />
+                    <span asp-validation-for="@Model.Accessory.ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-text">Last name</label>
+                    <input asp-for="@Model.Accessory.Price" class="form-control" />
+                    <span asp-validation-for="@Model.Accessory.Price" class="text-danger"></span>
+                </div>
+        
+
+
+                <div style="padding:1rem;"></div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success float-right" value="Tilføj Tilbehøret" style="padding:1rem;" />
+                </div>
+            </form>
+            }
+        } else
+        {
+            <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+        }
+
+</div>
