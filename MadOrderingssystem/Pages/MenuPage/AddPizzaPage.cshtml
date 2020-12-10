@@ -18,29 +18,34 @@
         </div>
         <div class="form-group">
             <label class="form-text">Pris</label>
+            <input asp-for="@Model.Pizza.Ingrediense" class="form-control" />
+            <span asp-validation-for="@Model.Pizza.Ingrediense" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-text">Pris</label>
             <input asp-for="@Model.Pizza.Price" class="form-control" />
             <span asp-validation-for="@Model.Pizza.Price" class="text-danger"></span>
         </div>
 
-                <div class="form-group">
-                    <label class="form-text">Roler</label>
-                    <ul>
-                        <li>
-                            <label class="form-text">Lille:</label>
-                            <input type="radio" name="Size" id="Size Lille" value="@Models.Size.Lille" class="" asp-for="@Model.Pizza.Size" />
-                        </li>
-                        <li>
-                            <label class="form-text">Stor</label>
-                            <input type="radio" name="Size" id="Size Stor" value="@Models.Size.Stor" class="" asp-for="@Model.Pizza.Size" />
-                        </li>
-                        <li>
-                            <label class="form-text">Familie</label>
-                            <input type="radio" name="Size" id="Size Familie" value="@Models.Size.Familie" class="" asp-for="@Model.Pizza.Size" />
-                        </li>
-                        
-                    </ul>
-                </div>
-            }
+        <div class="form-group">
+            <label class="form-text">Roler</label>
+            <ul>
+                <li>
+                    <label class="form-text">Lille:</label>
+                    <input type="radio" name="Size" id="Size Lille" value="@Models.Size.Lille" class="" asp-for="@Model.Pizza.Size" />
+                </li>
+                <li>
+                    <label class="form-text">Stor</label>
+                    <input type="radio" name="Size" id="Size Stor" value="@Models.Size.Stor" class="" asp-for="@Model.Pizza.Size" />
+                </li>
+                <li>
+                    <label class="form-text">Familie</label>
+                    <input type="radio" name="Size" id="Size Familie" value="@Models.Size.Familie" class="" asp-for="@Model.Pizza.Size" />
+                </li>
+
+            </ul>
+        </div>
+        }
         }
 
         <div style="padding:1rem;"></div>

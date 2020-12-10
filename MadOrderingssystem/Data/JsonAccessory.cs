@@ -13,15 +13,17 @@ namespace MadOrderingssystem.Data
      * only needs a dictionary and a file path
      * -Andreas
     */
-    public class JsonProduct
+    public class JsonAccessory
     {
-        public Dictionary<string,Product> ReadJsonFile(string filePath)
+        public Dictionary<string,Accessory> ReadJsonFile(string filePath)
         {
+
             string input = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<Dictionary<string, Product>>(input);
+            
+            return JsonConvert.DeserializeObject<Dictionary<string, Accessory>>(input); ;
         }
 
-        public void WriteJsonFile(Dictionary<string,Product> dic, string filePath)
+        public void WriteJsonFile(Dictionary<string,Accessory> dic, string filePath)
         {
            string output = JsonConvert.SerializeObject(dic, Formatting.Indented);
            File.WriteAllText(filePath,output);

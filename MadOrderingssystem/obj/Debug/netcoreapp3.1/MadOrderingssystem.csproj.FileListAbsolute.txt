@@ -152,7 +152,6 @@ C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CopyComplete
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddAccessoryPage.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddMenuPage.cshtml.g.cs
-C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPage.cshtml.g.cs
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataCustomer.json
@@ -211,3 +210,5 @@ D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netco
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.genruntimeconfig.cache
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPizzaPage.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPizzaPage.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddToppingsPage.cshtml.g.cs

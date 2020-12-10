@@ -35,8 +35,8 @@ namespace MadOrderingssystem.Pages.MenuPage
 
                 ProductHandler pH = new ProductHandler();
                 pH.Create(Toppings);
-
-                return RedirectToPage("MenuTable");
+                return Page();
+                //return RedirectToPage("MenuTable");
             }
             return Page();
         }

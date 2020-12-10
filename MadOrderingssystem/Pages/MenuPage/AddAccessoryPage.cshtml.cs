@@ -17,6 +17,8 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         [BindProperty]
         public Accessory Accessory { get; set; }
+        [BindProperty]
+        public bool IsAlcohol { get; set; }
 
         public void OnGet()
         {
@@ -29,16 +31,16 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public IActionResult OnPost()
         {
+            
             if (ModelState.IsValid)
             {
-                
-
+                               
                 ProductHandler pH = new ProductHandler();
                 pH.Create(Accessory);
 
-                return RedirectToPage("MenuTable");
-            }
-            return Page();
+                //return RedirectToPage("MenuTable");
+                
+            }   
             return Page();
         }
     }

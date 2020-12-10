@@ -1,8 +1,10 @@
 ﻿namespace MadOrderingssystem.Models
 {
-    public class Toppings : Pizza
+    public class Toppings : Product
     {
-       public Toppings(Size size, string newId, double pris, string productName) : base(size, newId, pris, productName)
+
+        public Toppings() { }
+       public Toppings(Size size, string newId, double pris, string productName) : base(newId, pris, productName)
       {
 
       }

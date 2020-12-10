@@ -1,26 +1,33 @@
 {
-  "0f60efb5-7d7e-4d3e-b062-4ba56a8ef63c": {
-    "Id": "0f60efb5-7d7e-4d3e-b062-4ba56a8ef63c",
+  "267d17f9-afa7-491f-badd-9a903feacf55": {
+    "Id": "267d17f9-afa7-491f-badd-9a903feacf55",
     "IsSelsected": false,
     "Price": 100.0,
-    "ProductName": "accessory1"
+    "ProductName": "pizza1"
   },
-  "b026477f-ebd2-4dd8-81aa-1c57821e661e": {
-    "Id": "b026477f-ebd2-4dd8-81aa-1c57821e661e",
+  "b23465ea-9d2f-4ed8-abd7-93ee9d9bf53c": {
+    "Id": "b23465ea-9d2f-4ed8-abd7-93ee9d9bf53c",
     "IsSelsected": false,
-    "Price": 1231231.0,
-    "ProductName": "tester1223"
+    "Price": 12.0,
+    "ProductName": "hej"
   },
-  "992d4144-ef64-4c9a-8df7-c1a9d3383a82": {
-    "Id": "992d4144-ef64-4c9a-8df7-c1a9d3383a82",
+  "ae0bc96c-d2e8-4098-8162-78935147a2ae": {
+    "Id": "ae0bc96c-d2e8-4098-8162-78935147a2ae",
     "IsSelsected": false,
-    "Price": 1231.0,
-    "ProductName": "eawfaf"
+    "Price": 123.0,
+    "ProductName": "true"
   },
-  "b70a036b-cbc6-4a98-b42e-b99779c58418": {
-    "Id": "b70a036b-cbc6-4a98-b42e-b99779c58418",
+  "f3c1b4e3-1755-4d49-98af-b6d6ebd83107": {
+    "Id": "f3c1b4e3-1755-4d49-98af-b6d6ebd83107",
     "IsSelsected": false,
-    "Price": 1231231.0,
-    "ProductName": "virkertilbegoer"
+    "Price": 12.0,
+    "ProductName": "false"
+  },
+  "cd26560c-1097-4d58-9d63-76decffce641": {
+    "IsAlcohol": false,
+    "Id": "cd26560c-1097-4d58-9d63-76decffce641",
+    "IsSelsected": false,
+    "Price": 123.0,
+    "ProductName": "true"
   }
 }

@@ -22,9 +22,10 @@
             <span asp-validation-for="@Model.Accessory.Price" class="text-danger"></span>
         </div>
         <div class="form-group">
+
             <label class="form-text">Er Alkohol:</label>
-            <input type="checkbox" asp-for="@Model.Accessory.IsAlcohol" class="form-control" />
-            <span asp-validation-for="@Model.Accessory.IsAlcohol" class="text-danger"></span>
+            <input type="checkbox" name="Accessory.IsAlcohol" value="true" asp-for="@Model.Accessory.IsAlcohol" class="form-control" />
+            <input type="hidden" name="Accessory.IsAlcohol" value="false" asp-for="@Model.Accessory.IsAlcohol" class="form-control" />
         </div>
 
 

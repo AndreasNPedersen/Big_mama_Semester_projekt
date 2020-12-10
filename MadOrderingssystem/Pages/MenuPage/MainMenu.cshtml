@@ -11,7 +11,7 @@
             One of three columns //filter
         </div>
         <div class="col-sm">
-            //Add product her
+
             @foreach (Menu menu in Model.DicMenu.Values)
             {
                 <div class="card m-3" style="min-width: 18rem; max-width:30.5%; height:100%">
@@ -25,6 +25,35 @@
                 </div>
             }
 
+            @foreach (Pizza pizza in Model.DicPizza.Values)
+            {
+                <div class="card m-3" style="min-width: 18rem; max-width:30.5%; height:100%">
+                    <div class="card-header">
+                        <p>Navn:@pizza.ProductName</p>
+                        <p>Pris:@pizza.Price</p>
+                        <p>Ingredienser: @pizza.Ingrediense</p>
+                        <div class="card-footer text-center">
+                            @foreach(Toppings topping in Model.DicToppings.Values)
+                            {
+                                <p>@topping.ProductName:</p>
+                                <input type="checkbox" asp-for="@topping.IsSelsected" class="form-control" />
+                                <p>for: @topping.Price DKK</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (Accessory accessory in Model.DicAccessories.Values)
+            {
+                <div class="card m-3" style="min-width: 18rem; max-width:30.5%; height:100%">
+                    <div class="card-header">
+                        <p>Navn:@accessory.ProductName</p>
+                        <p>Pris:@accessory.Price</p>
+                        <div class="card-footer text-center">
+                        </div>
+                    </div>
+                </div>
+            }
 
         </div>//Menu
         <div class="col-sm">

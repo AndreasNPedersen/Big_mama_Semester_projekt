@@ -13,45 +13,28 @@ namespace MadOrderingssystem.Pages.MenuPage
     public class MainMenuModel : PageModel
     {
         
-        private Dictionary<string, Product> DicProduct { get; set; }
+        
         public Dictionary<string, Pizza> DicPizza { get; set; }
         public Dictionary<string, Menu> DicMenu { get; set; }
         public Dictionary<string, Accessory> DicAccessories { get; set; }
         public Dictionary<string, Toppings> DicToppings { get; set; }
-        private DateTime DateTime { get; set; }
+        private DateTime DateTimeNow { get; set; }
         private bool AlcoholTime { get; set; }
         [BindProperty]
         public List<Product> Basket { get; set; }
 
         public void OnGet()
         {
-        
-            ProductHandler pH = new ProductHandler();
-            DicProduct = pH.GetDictionary();
-            foreach (Product product in DicProduct.Values)
-            {
-                if (product is Pizza)
-                {
-                    Pizza pizza = (Pizza)product;
-                    DicPizza.Add(pizza.Id, pizza);
-                }
-                if (product is Menu)
-                {
-                    Menu menu = (Menu)product;
-                    DicMenu.Add(menu.Id, menu);
-                }
-                if (product is Accessory)
-                {
-                    Accessory accessory = (Accessory)product;
-                    // checks the time for the alcohol
-                    if (DateTime.Now.Hour < 22 || DateTime.Now.Hour > 5) { AlcoholTime = true; }
-                    if (AlcoholTime == false)
-                    {
-                        DicAccessories.Add(accessory.Id, accessory);
-                    }
-                }
-            }
+            DateTimeNow = DateTime.Now;
             
+            // checks the time for the alcohol
+            if (DateTimeNow.Hour < 22 || DateTimeNow.Hour > 5) { AlcoholTime = true; }
+            if (AlcoholTime == false)
+            {
+                 DicAccessories.Add(accessory.Id, accessory);
+            }         
+                    
+  
         }
 
     }
