@@ -1,7 +1,26 @@
 {
   "0f60efb5-7d7e-4d3e-b062-4ba56a8ef63c": {
     "Id": "0f60efb5-7d7e-4d3e-b062-4ba56a8ef63c",
+    "IsSelsected": false,
     "Price": 100.0,
     "ProductName": "accessory1"
+  },
+  "b026477f-ebd2-4dd8-81aa-1c57821e661e": {
+    "Id": "b026477f-ebd2-4dd8-81aa-1c57821e661e",
+    "IsSelsected": false,
+    "Price": 1231231.0,
+    "ProductName": "tester1223"
+  },
+  "992d4144-ef64-4c9a-8df7-c1a9d3383a82": {
+    "Id": "992d4144-ef64-4c9a-8df7-c1a9d3383a82",
+    "IsSelsected": false,
+    "Price": 1231.0,
+    "ProductName": "eawfaf"
+  },
+  "b70a036b-cbc6-4a98-b42e-b99779c58418": {
+    "Id": "b70a036b-cbc6-4a98-b42e-b99779c58418",
+    "IsSelsected": false,
+    "Price": 1231231.0,
+    "ProductName": "virkertilbegoer"
   }
 }
