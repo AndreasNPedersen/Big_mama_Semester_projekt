@@ -15,6 +15,8 @@ namespace MadOrderingssystem.Models
 		public Customer customer {get;set;}
 		public double TotalPrice { get; set; }
 
+		public bool BuyTakeAway{ get; set; }
+
 		public Order() {
 		foreach(Product product in products)
             {
