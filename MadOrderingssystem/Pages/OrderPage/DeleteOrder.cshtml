@@ -30,12 +30,10 @@
         <input type="text" readonly class="form-control" asp-for="@Model.Order.TotalPrice" />
         <span asp-validation-for="@Model.Order.TotalPrice" class="text-danger"></span>
 
-        <input type="hidden" class="form-control" asp-for="@Model.Order.ID" />
-
         <div style="padding:1rem;"></div>
-        <input type="submit" class="btn btn-success float-right" value="Slet order" placeholder="Delete" style="padding:1rem;" />
+        <input type="submit" class="btn btn-danger float-right" value="Slet order" placeholder="Delete" style="padding:1rem;" />
     </form>
     <div>
-        <a asp-page="OrderList">Tilbage til order listen</a>
+        <a asp-page="OrderList">Tilbage til Order listen</a>
     </div>
 </div>

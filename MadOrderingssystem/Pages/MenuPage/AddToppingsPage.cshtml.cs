@@ -11,34 +11,34 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
-    public class DeletePageModel : PageModel
+    public class AddToppingsPageModel : PageModel
     {
         public Customer CustomerSession { get; set; }
 
         [BindProperty]
-        public Product Product { get; set; }
+        public Toppings Toppings { get; set; }
 
-        public IActionResult OnGet(string id)
-        { 
-            ProductHandler pH = new ProductHandler();
-            Product = pH.Get(id);
+        public void OnGet()
+        {
             try
             {
                 CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
             }
             catch (ArgumentNullException ex) { }
-            return Page();
         }
 
         public IActionResult OnPost()
         {
-            ProductHandler pH = new ProductHandler();
-            if (Product != null)
+            if (ModelState.IsValid)
             {
-                pH.Delete(Product.Id);
+
+
+                ProductHandler pH = new ProductHandler();
+                pH.Create(Toppings);
+
                 return RedirectToPage("MenuTable");
             }
-            return RedirectToPage("MenuTable");
+            return Page();
         }
     }
 }

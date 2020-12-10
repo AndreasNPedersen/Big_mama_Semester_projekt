@@ -1,15 +1,31 @@
-﻿@page
+﻿@page "{id}"
 @model MadOrderingssystem.Pages.MenuPage.DeletePageModel
 @{
     ViewData["Title"] = "Menu Delete";
+    @using MadOrderingssystem.Models;
 }
 <div class="container">
 
-<h1 class="text-center"> Er du sikker på at slette Produktet?</h1>
-<form class="form-group" method="post">
-<input class="form-control btn-danger" type="submit" >Ja</input>
-</form>
+    <h1 class="text-center"> Er du sikker på at slette Produktet?</h1>
 
-    <a asp-page="MenuTable">Tilbage til menu listen</a>
+    <form class="form-group" method="post">
+        <label class="form-text">Produktet</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Product.ProductName" />
+        <span asp-validation-for="@Model.Product.ProductName" class="text-danger"></span>
 
+        <label class="form-text">Pris</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Product.Price" />
+        <span asp-validation-for="@Model.Product.Price" class="text-danger"></span>
+
+        <label class="form-text">Id</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Product.Id" />
+        <span asp-validation-for="@Model.Product.Id" class="text-danger"></span>
+
+        <div style="padding:1rem;"></div>
+        <input type="submit" class="btn btn-danger float-right" value="Slet Produkt" placeholder="Delete" style="padding:1rem;" />
+    </form>
+
+    <div>
+        <a asp-page="MenuTable">Tilbage til Menu listen</a>
+    </div>
 </div>
