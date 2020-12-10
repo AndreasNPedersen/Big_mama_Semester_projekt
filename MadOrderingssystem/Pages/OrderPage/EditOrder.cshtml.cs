@@ -18,8 +18,8 @@ namespace MadOrderingssystem.Pages.OrderPage
         public Customer CustomerSession { get; set; }
         [BindProperty]
         public Order Order { get; set; }
-
-        public List<Product> ProductOrderList { get; set; }
+        
+       
 
         public void OnGet(string id)
         {
@@ -40,8 +40,15 @@ namespace MadOrderingssystem.Pages.OrderPage
             {
                 return Page();
             }
-
-            Order.products = ProductOrderList;
+            List<Product> productChoosen = new List<Product>();
+            foreach(Product product in Order.products)
+            {
+                if (product.IsSelsected)
+                {
+                    productChoosen.Add(product);
+                }
+            }
+            Order.products = productChoosen;
             OrderHandler oH = new OrderHandler();
             oH.Update(Order, Order.ID);
 

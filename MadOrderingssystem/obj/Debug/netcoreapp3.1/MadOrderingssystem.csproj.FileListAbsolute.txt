@@ -150,3 +150,6 @@ C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.genruntimeconfig.cache
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.csproj.CopyComplete
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddAccessoryPage.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddMenuPage.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPage.cshtml.g.cs

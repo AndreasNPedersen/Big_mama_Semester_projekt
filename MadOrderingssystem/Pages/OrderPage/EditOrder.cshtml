@@ -9,10 +9,10 @@
     <form class="form-group" method="post">
         <div asp-validation-summary="ModelOnly"></div>
         <label class="form-text">Produkter</label>
-        @foreach (Product product in Model.Order.products)
+        @for (int i = 0; i < Model.Order.products.Count(); i++)
         {
-            <p>@product.ProductName</p>
-            <input type="checkbox" class="form-control" asp-for="@Model.ProductOrderList.Add(product)" />
+            <p>@Model.Order.products[i].ProductName</p>
+            <input type="checkbox" asp-for="@Model.Order.products[i].IsSelsected" class="form-control" />
         }
 
         <input type="hidden" asp-for="@Model.Order.ID" />

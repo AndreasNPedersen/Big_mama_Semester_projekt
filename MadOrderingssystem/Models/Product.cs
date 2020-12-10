@@ -12,7 +12,8 @@ namespace MadOrderingssystem.Models
 		//Guid id, Price, Product Name
 
 		public string Id { get; set; }
-		public double Price { get; set; }
+        public bool IsSelsected { get; set; }
+        public double Price { get; set; }
 		public string ProductName { get; set; }
         //public string ImagePath { get; set; }
 

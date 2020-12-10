@@ -5,9 +5,9 @@
     @using MadOrderingssystem.Models;
 }
 
-<h1 class="text-center">User Tabel</h1>
+<h1 class="text-center">Bruger Tabel</h1>
 <p class="text-center"></p>
-<h3>Users</h3>
+<h3>Brugere</h3>
 
 <table class="table">
     <thead>
@@ -38,6 +38,9 @@
             </th>
             <th>
                 Password
+            </th>
+            <th>
+                Role
             </th>
             <th>
                 Kontrol
@@ -74,6 +77,9 @@
             </td>
             <td>
                 @customer.Password
+            </td>
+            <td>
+                @customer.Role
             </td>
             <td>
                 <p>

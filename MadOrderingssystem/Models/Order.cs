@@ -9,9 +9,8 @@ namespace MadOrderingssystem.Models
 	{
 		//Mikkel
 		//Skal indeholde
-		//Guid id,(List) Products, Customer
+		//Guid id,(List) Products, Customer, TotalPrice
 		public string ID { get; set; }
-
 		public List<Product> products { get; set; }
 		public Customer customer {get;set;}
 		public double TotalPrice { get; set; }

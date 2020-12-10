@@ -10,7 +10,6 @@ namespace MadOrderingssystem.Models
         //Mikkel
         //Skal indeholde
         //Pizzas, Accesories
-        
         public List<Pizza> Pizzas{get; set;}
         public List<Accessory> Accesories{get; set;}
         

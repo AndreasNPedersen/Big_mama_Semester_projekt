@@ -9,6 +9,7 @@ namespace MadOrderingssystem.Models
     {
         
         public Size Size { get; set; }
+        public List<Toppings> Topping { get; set; }
  
 
         public Pizza(Size size, string newId, double pris, string productName) : base(newId, pris, productName)

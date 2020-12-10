@@ -1,0 +1,56 @@
+﻿@page
+@model MadOrderingssystem.Pages.MenuPage.AddMenuPageModel
+@{
+    ViewData["Title"] = "Tilføj tilbehør";
+}
+
+<div class="container">
+    @if (Model.CustomerSession != null)
+    {
+        @if (Model.CustomerSession.Role == Models.Roles.Management)
+        {
+    <form method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label class="form-text">Navn</label>
+            <input asp-for="@Model.Menu.ProductName" class="form-control" />
+            <span asp-validation-for="@Model.Menu.ProductName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-text">Pris</label>
+            <input asp-for="@Model.Menu.Price" class="form-control" />
+            <span asp-validation-for="@Model.Menu.Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="form-text">vælg hvilke Pizzaer</label>
+            @for (int i = 0; i < Model.Menu.Pizzas.Count(); i++)
+            {
+                <p>@Model.Menu.Pizzas[i].ProductName:</p>
+                <input type="checkbox" asp-for="@Model.Menu.Pizzas[i].IsSelsected" class="form-control" />
+            }
+        </div>
+        <div class="form-group">
+            <label class="form-text">vælg hvilke Tilbehør</label>
+            @for (int i = 0; i < Model.Menu.Accesories.Count(); i++)
+            {
+                <p>@Model.Menu.Accesories[i].ProductName:</p>
+                <input type="checkbox" asp-for="@Model.Menu.Accesories[i].IsSelsected" class="form-control" />
+            }
+        </div>
+
+        <div style="padding:1rem;"></div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success float-right" value="Tilføj Tilbehøret" style="padding:1rem;" />
+        </div>
+    </form>
+        }
+    }
+    else
+    {
+        <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+        <div>
+            <a class="text-center" asp-page="/Login/log_in">Login med din bruger</a>
+        </div>
+    }
+
+</div>
