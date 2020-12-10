@@ -17,6 +17,9 @@ namespace MadOrderingssystem.Pages.MenuPage
         public Dictionary<string, Pizza> DicPizza { get; set; }
         public Dictionary<string, Menu> DicMenu { get; set; }
         public Dictionary<string, Accessory> DicAccessories { get; set; }
+        public Dictionary<string, Toppings> DicToppings { get; set; }
+        private DateTime DateTime { get; set; }
+        private bool AlcoholTime { get; set; }
         [BindProperty]
         public List<Product> Basket { get; set; }
 
@@ -40,7 +43,12 @@ namespace MadOrderingssystem.Pages.MenuPage
                 if (product is Accessory)
                 {
                     Accessory accessory = (Accessory)product;
-                    DicAccessories.Add(accessory.Id, accessory);
+                    // checks the time for the alcohol
+                    if (DateTime.Now.Hour < 22 || DateTime.Now.Hour > 5) { AlcoholTime = true; }
+                    if (AlcoholTime == false)
+                    {
+                        DicAccessories.Add(accessory.Id, accessory);
+                    }
                 }
             }
             

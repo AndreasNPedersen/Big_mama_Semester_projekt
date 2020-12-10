@@ -7,7 +7,9 @@ namespace MadOrderingssystem.Models
 {
     public class Accessory : Product
     {
+        public bool IsAlcohol { get; set; }
         public Accessory() { } //default constructor
+
         public Accessory(string newId, double pris, string productName) : base(newId, pris, productName)
         {
 
