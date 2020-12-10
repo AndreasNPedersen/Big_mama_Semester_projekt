@@ -17,11 +17,30 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         [BindProperty]
         public Product Product { get; set; }
+  
 
         public IActionResult OnGet(string id)
         { 
-            ProductHandler pH = new ProductHandler();
-            Product = pH.Get(id);
+            AccessoryHandler aH = new AccessoryHandler();
+            MenuHandler mH = new MenuHandler();
+            PizzaHandler pH = new PizzaHandler();
+            ToppingHandler tH = new ToppingHandler();
+            if (aH.Get(id) != null)
+            {
+                Product = aH.Get(id);
+            }
+            if (mH.Get(id) != null)
+            {
+                Product = mH.Get(id);
+            }
+            if (pH.Get(id) != null)
+            {
+                Product = pH.Get(id);
+            }
+            if (tH.Get(id) != null)
+            {
+                Product = tH.Get(id);
+            }
             try
             {
                 CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
@@ -32,10 +51,28 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public IActionResult OnPost()
         {
-            ProductHandler pH = new ProductHandler();
+            AccessoryHandler aH = new AccessoryHandler();
+            MenuHandler mH = new MenuHandler();
+            PizzaHandler pH = new PizzaHandler();
+            ToppingHandler tH = new ToppingHandler();
             if (Product != null)
             {
-                pH.Delete(Product.Id);
+                if (Product is Accessory)
+                {
+                    Product = aH.Get(Product.Id);
+                }
+                if (Product is Menu)
+                {
+                    Product = mH.Get(Product.Id);
+                }
+                if (Product is Pizza)
+                {
+                    Product = pH.Get(Product.Id);
+                }
+                if (Product is Toppings)
+                {
+                    Product = tH.Get(Product.Id);
+                }
                 return RedirectToPage("MenuTable");
             }
             return RedirectToPage("MenuTable");

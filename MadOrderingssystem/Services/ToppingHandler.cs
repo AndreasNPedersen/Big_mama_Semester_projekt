@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class ToppingHandler : IManagement<Toppings>
     {
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataTopping.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataToppings.json";
         public void Create(Toppings toppings)
         {
             JsonTopping jsonTopping = new JsonTopping();
@@ -28,7 +28,7 @@ namespace MadOrderingssystem.Services
             jsonTopping.WriteJsonFile(dic, filePath);
         }
 
-        public Dictionary<string, Topping> FilterDictionary(string filter)
+        public Dictionary<string, Toppings> FilterDictionary(string filter)
         {
             //need the filtering of pizza toppings
             JsonTopping jsonTopping = new JsonTopping();
@@ -48,7 +48,7 @@ namespace MadOrderingssystem.Services
             return dicC;
         }
 
-        public Product Get(string id)
+        public Toppings Get(string id)
         {
             JsonTopping jsonTopping = new JsonTopping();
             Dictionary<string, Toppings> dic = jsonTopping.ReadJsonFile(filePath);

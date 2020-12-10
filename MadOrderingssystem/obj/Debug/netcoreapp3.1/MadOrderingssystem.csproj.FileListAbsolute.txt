@@ -46,7 +46,6 @@ C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataCustomer.json
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataOrders.json
-C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataProducts.json
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.exe
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.deps.json
@@ -212,3 +211,10 @@ D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netco
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPizzaPage.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddPizzaPage.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddToppingsPage.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataAccessories.json
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataMenu.json
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataPizza.json
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataToppings.json
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditAccessory.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditPizza.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditToppings.cshtml.g.cs

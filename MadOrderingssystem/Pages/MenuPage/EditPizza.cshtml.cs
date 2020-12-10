@@ -22,7 +22,7 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public void OnGet(string id)
         {
-            ProductHandler pH = new ProductHandler();
+            PizzaHandler pH = new PizzaHandler();
             Pizza = pH.Get(id);
             try
             {
@@ -40,7 +40,7 @@ namespace MadOrderingssystem.Pages.MenuPage
                 return Page();
             }
 
-            ProductHandler pH = new ProductHandler();
+            PizzaHandler pH = new PizzaHandler();
             pH.Update(Pizza, Pizza.Id);
 
             return RedirectToPage("MenuTable");

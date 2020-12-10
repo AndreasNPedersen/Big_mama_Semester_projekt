@@ -35,8 +35,8 @@ namespace MadOrderingssystem.Pages.MenuPage
             if (ModelState.IsValid)
             {
                                
-                ProductHandler pH = new ProductHandler();
-                pH.Create(Accessory);
+                AccessoryHandler aH = new AccessoryHandler();
+                aH.Create(Accessory);
 
                 //return RedirectToPage("MenuTable");
                 

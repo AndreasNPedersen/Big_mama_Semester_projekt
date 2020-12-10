@@ -87,7 +87,7 @@
                 Size
             </th>
             <th>
-                Toppings
+                Ingedienser
             </th>
             <th>
                 Kontrol
@@ -108,26 +108,10 @@
                     @pizza.Price
                 </td>
                 <td>
-                    <ul>
-                        <li>
-                            <label class="form-text">Lille:</label>
-                            <input type="radio" name="Roles" id="Kunde role" value="@Models.Size.Lille" class="" asp-for="@pizza.Size" />
-                        </li>
-                        <li>
-                            <label class="form-text">Stor:</label>
-                            <input type="radio" name="Roles" id="Pizza Bager role" value="@Models.Size.Stor" class="" asp-for="@pizza.Size" />
-                        </li>
-                        <li>
-                            <label class="form-text">Familie:</label>
-                            <input type="radio" name="Roles" id="Salgs persen role" value="@Models.Size.Familie" class="" asp-for="@pizza.Size" />
-                        </li>
-                    </ul>
+                    @pizza.Size
                 </td>
                 <td>
-                    @for (int i = 0; i < pizza.Topping.Count(); i++)
-                    {
-                        <p>@pizza.Topping[i].ProductName</p>
-                    }
+                   @pizza.Ingrediense
                 </td>
                 <td>
                     <p>

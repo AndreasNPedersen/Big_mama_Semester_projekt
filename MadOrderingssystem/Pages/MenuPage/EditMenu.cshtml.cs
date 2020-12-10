@@ -22,8 +22,8 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public void OnGet(string id)
         {
-            ProductHandler pH = new ProductHandler();
-            Menu = pH.Get(id);
+            MenuHandler mH = new MenuHandler();
+            Menu = mH.Get(id);
             try
             {
                 CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
@@ -40,8 +40,8 @@ namespace MadOrderingssystem.Pages.MenuPage
                 return Page();
             }
 
-            ProductHandler pH = new ProductHandler();
-            pH.Update(Menu, Menu.Id);
+            MenuHandler mH = new MenuHandler();
+            mH.Update(Menu, Menu.Id);
 
             return RedirectToPage("MenuTable");
 

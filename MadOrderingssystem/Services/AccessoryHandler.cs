@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class AccessoryHandler : IManagement<Accessory>
     {
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessory.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessories.json";
         public void Create(Accessory accessory)
         {
             JsonAccessory jsonAccessory = new JsonAccessory();
@@ -23,7 +23,7 @@ namespace MadOrderingssystem.Services
         public void Delete(string id)
         {
             JsonAccessory jsonAccessory = new JsonAccessory();
-            Dictionary<string, Product> dic = jsonAccessory.ReadJsonFile(filePath);
+            Dictionary<string, Accessory> dic = jsonAccessory.ReadJsonFile(filePath);
             dic.Remove(id);
             jsonAccessory.WriteJsonFile(dic, filePath);
         }
@@ -36,13 +36,13 @@ namespace MadOrderingssystem.Services
             Dictionary<string, Accessory> dicC = new Dictionary<string, Accessory>();
             foreach (Accessory accessory in dic.Values)
             {
-                if (product.Id.ToLower().Contains(filter.ToLower()))
+                if (accessory.Id.ToLower().Contains(filter.ToLower()))
                 {
                     dicC.Add(accessory.Id, accessory);
                 }
-                if (accessory.AccessoryName.ToLower().Contains(filter.ToLower()))
+                if (accessory.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(accessory.AccessoryName, accessory);
+                    dicC.Add(accessory.ProductName, accessory);
                 }
             }
             return dicC;

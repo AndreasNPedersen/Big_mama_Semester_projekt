@@ -1,7 +1,7 @@
 ﻿@page
 @model MadOrderingssystem.Pages.MenuPage.AddMenuPageModel
 @{
-    ViewData["Title"] = "Tilføj tilbehør";
+    ViewData["Title"] = "Tilføj Menu";
     @using MadOrderingssystem.Models;
 }
 
@@ -24,20 +24,28 @@
                 </div>
                 <div class="form-group">
                     <label class="form-text">vælg hvilke Pizzaer</label>
-                    @foreach (Pizza pizza in Model.Menu.Pizzas)
+                    @foreach (Pizza pizza in Model.DicPizzas.Values)
                     {
                         <p>@pizza.ProductName:</p>
-                        <input type="checkbox" name="Pizza.IsSelsected" asp-for="@pizza.IsSelsected" class="form-control" />
-                        <input type="hidden" name="Pizza.IsSelsected" value="false" asp-for="@pizza.IsSelsected" class="form-control" />
+                        <input asp-for="@Model.DicPizzas[pizza.Id].IsSelsected" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Id" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Ingrediense" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Price" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].ProductName" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Size" />
                     }
+
                 </div>
                 <div class="form-group">
                     <label class="form-text">vælg hvilke Tilbehør</label>
-                    @foreach (Accessory accessory in Model.Menu.Accesories)
+                    @foreach (Accessory accessory in Model.DicAccessories.Values)
                     {
                         <p>@accessory.ProductName:</p>
-                        <input type="checkbox" name="Accessory.IsSelsected" asp-for="@accessory.IsSelsected" class="form-control" />
-                        <input type="hidden" name="Accessory.IsSelsected" value="false" asp-for="@accessory.IsSelsected" class="form-control" />
+                        <input asp-for="@Model.DicAccessories[accessory.Id].IsSelsected" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].Id" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].Price" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].ProductName" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].IsAlcohol" />
                     }
                 </div>
 

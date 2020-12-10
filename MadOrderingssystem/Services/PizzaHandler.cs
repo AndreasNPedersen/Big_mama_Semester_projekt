@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class PizzaHandler : IManagement<Pizza>
     {
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
         public void Create(Pizza pizza)
         {
             JsonPizza jsonPizza = new JsonPizza();
@@ -40,9 +40,9 @@ namespace MadOrderingssystem.Services
                 {
                     dicC.Add(pizza.Id, pizza);
                 }
-                if (pizza.PizzaName.ToLower().Contains(filter.ToLower()))
+                if (pizza.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(pizza.PizzaName, pizza);
+                    dicC.Add(pizza.ProductName, pizza);
                 }
             }
             return dicC;

@@ -34,10 +34,10 @@ namespace MadOrderingssystem.Pages.MenuPage
             {
 
 
-                ProductHandler pH = new ProductHandler();
+                PizzaHandler pH = new PizzaHandler();
                 pH.Create(Pizza);
-
-                return RedirectToPage("MenuTable");
+                return Page();
+                //return RedirectToPage("MenuTable");
 
             }
             return Page();

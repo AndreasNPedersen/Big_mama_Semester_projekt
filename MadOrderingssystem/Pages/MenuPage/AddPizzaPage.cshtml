@@ -4,64 +4,43 @@
     ViewData["Title"] = "Add Pizza";
 }
 
-<div class="container">
-    @if (Model.CustomerSession != null)
-    {
-        @if (Model.CustomerSession.Role == Models.Roles.Management)
+    <div class="container">
+        @if (Model.CustomerSession != null)
         {
-    <form method="post">
-        <div asp-validation-summary="ModelOnly"></div>
-        <div class="form-group">
-            <label class="form-text">Navn</label>
-            <input asp-for="@Model.Pizza.ProductName" class="form-control" />
-            <span asp-validation-for="@Model.Pizza.ProductName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label class="form-text">Pris</label>
-            <input asp-for="@Model.Pizza.Ingrediense" class="form-control" />
-            <span asp-validation-for="@Model.Pizza.Ingrediense" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label class="form-text">Pris</label>
-            <input asp-for="@Model.Pizza.Price" class="form-control" />
-            <span asp-validation-for="@Model.Pizza.Price" class="text-danger"></span>
-        </div>
+            @if (Model.CustomerSession.Role == Models.Roles.Management)
+            {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label class="form-text">Navn</label>
+                    <input asp-for="@Model.Pizza.ProductName" class="form-control" />
+                    <span asp-validation-for="@Model.Pizza.ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-text">Ingredienser (lang tekst)</label>
+                    <input asp-for="@Model.Pizza.Ingrediense" class="form-control" />
+                    <span asp-validation-for="@Model.Pizza.Ingrediense" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-text">Pris</label>
+                    <input asp-for="@Model.Pizza.Price" class="form-control" />
+                    <span asp-validation-for="@Model.Pizza.Price" class="text-danger"></span>
+                </div>
 
-        <div class="form-group">
-            <label class="form-text">Roler</label>
-            <ul>
-                <li>
-                    <label class="form-text">Lille:</label>
-                    <input type="radio" name="Size" id="Size Lille" value="@Models.Size.Lille" class="" asp-for="@Model.Pizza.Size" />
-                </li>
-                <li>
-                    <label class="form-text">Stor</label>
-                    <input type="radio" name="Size" id="Size Stor" value="@Models.Size.Stor" class="" asp-for="@Model.Pizza.Size" />
-                </li>
-                <li>
-                    <label class="form-text">Familie</label>
-                    <input type="radio" name="Size" id="Size Familie" value="@Models.Size.Familie" class="" asp-for="@Model.Pizza.Size" />
-                </li>
-
-            </ul>
-        </div>
+                <div style="padding:1rem;"></div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success float-right" value="Tilføj Pizza" style="padding:1rem;" />
+                </div>
+            </form>
+            }
         }
+        else
+        {
+            <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+            <div>
+                <a asp-page="/Login/log_in">Login med din bruger</a>
+            </div>
         }
 
-        <div style="padding:1rem;"></div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-success float-right" value="Tilføj Pizza" style="padding:1rem;" />
-        </div>
-    </form>
-        }
-    }
-    else
-    {
-        <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
-        <div>
-            <a asp-page="/Login/log_in">Login med din bruger</a>
-        </div>
-    }
 
-
-</div>
+    </div>

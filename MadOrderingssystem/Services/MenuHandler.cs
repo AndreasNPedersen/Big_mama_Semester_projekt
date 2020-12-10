@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class MenuHandler : IManagement<Menu>
     {
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
         public void Create(Menu menu)
         {
             JsonMenu jsonMenu = new JsonMenu();
@@ -32,17 +32,17 @@ namespace MadOrderingssystem.Services
         {
             //need the filtering of pizza toppings
             JsonMenu jsonMenu = new JsonMenu();
-            Dictionary<string, Product> dic = jsonMenu.ReadJsonFile(filePath);
-            Dictionary<string, Product> dicC = new Dictionary<string, Menu>();
+            Dictionary<string, Menu> dic = jsonMenu.ReadJsonFile(filePath);
+            Dictionary<string, Menu> dicC = new Dictionary<string, Menu>();
             foreach (Menu menu in dic.Values)
             {
                 if (menu.Id.ToLower().Contains(filter.ToLower()))
                 {
                     dicC.Add(menu.Id, menu);
                 }
-                if (menu.MenuName.ToLower().Contains(filter.ToLower()))
+                if (menu.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(menu.MenuName, menu);
+                    dicC.Add(menu.ProductName, menu);
                 }
             }
             return dicC;

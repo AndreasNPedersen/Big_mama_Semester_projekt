@@ -15,13 +15,18 @@ namespace MadOrderingssystem.Pages.MenuPage
     {
         public Customer CustomerSession { get; set; }
         [BindProperty]
+        public Dictionary<string,Pizza> DicPizzas { get; set; }
+        [BindProperty]
+        public Dictionary<string,Accessory> DicAccessories { get; set; }
+        [BindProperty]
         public Menu Menu { get; set; }
 
-        private Dictionary<string,Product> productList { get; set; }
 
         public void OnGet()
         {
-            ProductHandler pH = new ProductHandler();
+            DicPizzas = new PizzaHandler().GetDictionary();
+            DicAccessories = new AccessoryHandler().GetDictionary();
+            MenuHandler mH = new MenuHandler();
             try
             {
                 CustomerSession = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("user"));
@@ -35,14 +40,14 @@ namespace MadOrderingssystem.Pages.MenuPage
             {
                 List<Pizza> productChoosenP = new List<Pizza>();
                 List<Accessory> productChoosenA = new List<Accessory>();
-                foreach (Pizza product in Menu.Pizzas)
+                foreach (Pizza product in DicPizzas.Values)
                 {
                     if (product.IsSelsected)
                     {
                         productChoosenP.Add(product);
                     }
                 }
-                foreach(Accessory product in Menu.Accesories)
+                foreach(Accessory product in DicAccessories.Values)
                 {
                     if (product.IsSelsected)
                     {
@@ -51,8 +56,8 @@ namespace MadOrderingssystem.Pages.MenuPage
                 }
                 Menu.Pizzas = productChoosenP;
                 Menu.Accesories = productChoosenA;
-                ProductHandler pH = new ProductHandler();
-                pH.Create(Menu);
+                MenuHandler mH = new MenuHandler();
+                mH.Create(Menu);
                 return Page();
             }
             return Page();
