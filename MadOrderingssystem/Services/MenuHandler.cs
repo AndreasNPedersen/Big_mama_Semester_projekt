@@ -11,7 +11,7 @@ namespace MadOrderingssystem.Services
     public class MenuHandler : IManagement<Menu>
     {
 
-        private string filePath = @"C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
 
         public void Create(Menu menu)
         {
@@ -54,15 +54,7 @@ namespace MadOrderingssystem.Services
         {
             JsonMenu jsonMenu = new JsonMenu();
             Dictionary<string, Menu> dic = jsonMenu.ReadJsonFile(filePath);
-            try
-            {
-                return dic[id];
-            }
-            catch (KeyNotFoundException ex)
-            {
-                Console.WriteLine("KeyNotFound " + ex.Message);
-                return null;
-            }
+            return dic[id];
         }
 
         public Dictionary<string, Menu> GetDictionary()

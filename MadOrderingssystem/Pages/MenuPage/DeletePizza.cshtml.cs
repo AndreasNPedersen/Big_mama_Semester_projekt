@@ -41,10 +41,8 @@ namespace MadOrderingssystem.Pages.MenuPage
             PizzaHandler tH = new PizzaHandler();
             if (Pizza != null)
             {
-                if (Pizza is Pizza)
-                {
-                    Pizza = tH.Get(Pizza.Id);
-                }
+               tH.Delete(Pizza.Id);
+                
                 return RedirectToPage("MenuTable");
             }
             return RedirectToPage("MenuTable");

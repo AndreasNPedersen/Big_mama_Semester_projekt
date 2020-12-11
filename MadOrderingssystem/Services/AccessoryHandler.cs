@@ -11,7 +11,7 @@ namespace MadOrderingssystem.Services
     public class AccessoryHandler : IManagement<Accessory>
     {
 
-        private string filePath = @"C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessories.json";
+        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessories.json";
 
         public void Create(Accessory accessory)
         {
@@ -54,15 +54,7 @@ namespace MadOrderingssystem.Services
         {
             JsonAccessory jsonAccessory = new JsonAccessory();
             Dictionary<string, Accessory> dic = jsonAccessory.ReadJsonFile(filePath);
-            try
-            {
-                return dic[id];
-            }
-            catch (KeyNotFoundException ex)
-            {
-                Console.WriteLine("KeyNotFound " + ex.Message);
-                return null;
-            }
+            return dic[id];
         }
 
         public Dictionary<string, Accessory> GetDictionary()

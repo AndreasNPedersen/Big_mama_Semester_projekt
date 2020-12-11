@@ -40,10 +40,8 @@ namespace MadOrderingssystem.Pages.MenuPage
             ToppingHandler tH = new ToppingHandler();
             if (Topping != null)
             {
-                if (Topping is Toppings)
-                {
-                    Topping = tH.Get(Topping.Id);
-                }
+                tH.Delete(Topping.Id);
+                
                 return RedirectToPage("MenuTable");
             }
             return RedirectToPage("MenuTable");

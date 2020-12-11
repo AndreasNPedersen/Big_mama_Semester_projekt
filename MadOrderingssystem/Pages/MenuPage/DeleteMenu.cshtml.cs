@@ -41,10 +41,9 @@ namespace MadOrderingssystem.Pages.MenuPage
 
             if (Menu != null)
             {
-                if (Menu is Menu)
-                {
-                    Menu = mH.Get(Menu.Id);
-                }
+
+                mH.Delete(Menu.Id);
+                
 
                 return RedirectToPage("MenuTable");
             }

@@ -85,7 +85,6 @@ C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.dll
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.pdb
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\MadOrderingssystem.genruntimeconfig.cache
-C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\DeletePage.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\MainMenu.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\MenuTable.cshtml.g.cs
 C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditMenu.cshtml.g.cs
@@ -237,3 +236,7 @@ D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netco
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditAccessory.cshtml.g.cs
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditPizza.cshtml.g.cs
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditToppings.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\DeleteAccessory.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\DeleteMenu.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\DeletePizza.cshtml.g.cs
+C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\DeleteToppings.cshtml.g.cs

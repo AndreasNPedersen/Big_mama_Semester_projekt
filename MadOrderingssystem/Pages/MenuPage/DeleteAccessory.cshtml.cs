@@ -42,10 +42,9 @@ namespace MadOrderingssystem.Pages.MenuPage
 
             if (Accessory != null)
             {
-                if (Accessory is Accessory)
-                {
-                    Accessory = aH.Get(Accessory.Id);
-                }
+               
+                aH.Delete(Accessory.Id);
+                
                 return RedirectToPage("MenuTable");
             }
             return RedirectToPage("MenuTable");
