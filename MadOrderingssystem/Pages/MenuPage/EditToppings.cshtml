@@ -1,4 +1,25 @@
 ﻿@page
 @model MadOrderingssystem.Pages.MenuPage.EditToppingsModel
 @{
+    ViewData["Title"] = "Rediger Topping";
 }
+<div class="container">
+    <form class="form-group" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <label class="form-text">Name</label>
+        <input type="text" class="form-control" asp-for="@Model.Toppings.ProductName" />
+        <span asp-validation-for="@Model.Toppings.ProductName" class="text-danger"></span>
+        <label class="form-text">Price</label>
+        <input type="text" class="form-control" asp-for="@Model.Toppings.Price" />
+        <span asp-validation-for="@Model.Toppings.Price" class="text-danger"></span>
+        <label class="form-text">Pris</label>
+        <input type="text" class="form-control" asp-for="@Model.Toppings.Id" />
+        <span asp-validation-for="@Model.Toppings.Id" class="text-danger"></span>
+
+        <input type="submit" class="btn btn-success float-right" value="Rediger Topping" placeholder="Ændre" style="padding:1rem;" />
+    </form>
+    <div>
+        <a asp-page="MenuTable">Tilbage til Menu listen</a>
+    </div>
+
+</div>
