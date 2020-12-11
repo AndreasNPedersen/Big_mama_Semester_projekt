@@ -10,11 +10,9 @@ namespace MadOrderingssystem.Services
 {
     public class MenuHandler : IManagement<Menu>
     {
-<<<<<<< HEAD
+
         private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
-=======
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataMenu.json";
->>>>>>> 5292a5178b673545a7ebf60df583e81a3f07d43f
+
         public void Create(Menu menu)
         {
             JsonMenu jsonMenu = new JsonMenu();

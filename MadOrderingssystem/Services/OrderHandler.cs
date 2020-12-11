@@ -10,11 +10,9 @@ namespace MadOrderingssystem.Services
 {
     public class OrderHandler : IManagement<Order>
     {
-<<<<<<< HEAD
+
         private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataOrders.json";
-=======
-        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataOrders.json";
->>>>>>> 5292a5178b673545a7ebf60df583e81a3f07d43f
+
         public void Create(Order order)
         {
             JsonOrder jsonOrder = new JsonOrder();

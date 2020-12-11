@@ -7,7 +7,7 @@
 
 @if (Model.CustomerSession != null)
 {
-    @if (Model.CustomerSession.Role == Models.Roles.Management)
+    @if (Model.CustomerSession.Role == Models.Roles.Management || Model.CustomerSession.Role == Models.Roles.SalesPerson)
     {
         <h1 class="text-center">Order Tabel</h1>
         <p class="text-center"></p>

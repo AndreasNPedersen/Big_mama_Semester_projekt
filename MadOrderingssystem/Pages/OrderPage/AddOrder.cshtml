@@ -36,10 +36,10 @@
 
         @if (Model.CustomerSession != null)
         {
-            @if (Model.CustomerSession.Role == Models.Roles.Management)
+            @if (Model.CustomerSession.Role == Models.Roles.SalesPerson)
             {
                 <label class="form-text">Bestil til bord</label>
-                <input type="radio"class="form-control" asp-for="@Model.Order.BuyTakeAway" />
+                <input asp-for="@Model.Order.BuyTakeAway" />
             }
         }
 

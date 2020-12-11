@@ -4,10 +4,6 @@
     ViewData["Title"] = "Login";
 }
 
-@if (Model.CustomerSession != null)
-{
-    @if (Model.CustomerSession.Role == Models.Roles.Management)
-    {
         <div class="container">
             <form class="form-group" method="post">
                 <label class="form-text">Email</label>
@@ -23,10 +19,4 @@
         </div>
     }
 }
-else
-{
-    <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
-    <div>
-        <a asp-page="/Login/log_in">Login med din bruger</a>
-    </div>
-}
+

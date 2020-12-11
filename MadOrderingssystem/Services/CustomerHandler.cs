@@ -16,11 +16,9 @@ namespace MadOrderingssystem.Services
     public class CustomerHandler
     {
         //change when using other data route
-<<<<<<< HEAD
+
         private string filePathCustomer = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
-=======
-        private string filePathCustomer = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
->>>>>>> 5292a5178b673545a7ebf60df583e81a3f07d43f
+
         public void Create(Customer customer)
         {
             customer.ID = Guid.NewGuid().ToString();
