@@ -14,16 +14,20 @@ namespace MadOrderingssystem.Pages.MenuPage
 {
     public class MainMenuModel : PageModel
     {
-        
-        
         public Dictionary<string, Pizza> DicPizza { get; set; }
         public Dictionary<string, Menu> DicMenu { get; set; }
+        [BindProperty]
         public Dictionary<string, Accessory> DicAccessories { get; set; }
         public Dictionary<string, Toppings> DicToppings { get; set; }
         private DateTime DateTimeNow { get; set; }
         private bool AlcoholTime { get; set; }
+        [BindProperty]
         public List<Product> Basket { get; set; }
-        
+        [BindProperty(SupportsGet = true)]
+        public string filtersøgning { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string filtersøgningIngredienser { get; set; }
+
 
         public IActionResult OnGet()
         {
@@ -34,15 +38,30 @@ namespace MadOrderingssystem.Pages.MenuPage
             DicPizza = new PizzaHandler().GetDictionary();
             
             // checks the time for the alcohol to show
-            if (DateTimeNow.Hour > 22 || DateTimeNow.Hour < 5) { AlcoholTime = true; }
+            if (DateTimeNow.Hour < 22 || DateTimeNow.Hour > 5) { AlcoholTime = true; }
             foreach(Accessory accessory in DicAccessories.Values)
             {
                 if (AlcoholTime == true)
                 {
+                    if (accessory.IsAlcohol) { 
                     DicAccessories.Remove(accessory.Id);
+                    }
                 }         
             }
 
+            if (!string.IsNullOrEmpty(filtersøgning))
+            {
+                DicMenu = new MenuHandler().FilterDictionary(filtersøgning);
+                DicAccessories = new AccessoryHandler().FilterDictionary(filtersøgning);
+                DicToppings = new ToppingHandler().FilterDictionary(filtersøgning);
+                DicPizza = new PizzaHandler().FilterDictionary(filtersøgning);
+            }
+
+            if (!string.IsNullOrEmpty(filtersøgningIngredienser))
+            {
+                filtersøgningIngredienser = "true" + filtersøgningIngredienser;
+                DicPizza = new PizzaHandler().FilterDictionary(filtersøgningIngredienser);
+            }
             try
             {
                 Basket = JsonConvert.DeserializeObject<List<Product>>(HttpContext.Session.GetString("basket"));
@@ -52,39 +71,72 @@ namespace MadOrderingssystem.Pages.MenuPage
             return Page();
         }
 
-        public IActionResult OnGetBuy(string id)
-        {
-            AccessoryHandler aH = new AccessoryHandler();
-            MenuHandler mH = new MenuHandler();
-            PizzaHandler pH = new PizzaHandler();
-            ToppingHandler tH = new ToppingHandler();
-            if (aH.Get(id) != null)
-            {
-                Basket.Add(aH.Get(id));
-            }
-            if (mH.Get(id) != null)
-            {
-                Basket.Add(mH.Get(id));
-            }
-            if (pH.Get(id) != null)
-            {
-                Basket.Add(pH.Get(id));
-            }
-            if (tH.Get(id) != null)
-            {
-                Basket.Add(tH.Get(id));
-            }
-            HttpContext.Session.SetString("basket", JsonConvert.SerializeObject(Basket));
-            return Page();
-        }
+       
         
-        public void OnPost()
+        public IActionResult OnPostBuya(string id)
         {
             //lav dette i onGet metode
             //lav hvert object kald objected i button, save det, add det
+            DicMenu = new MenuHandler().GetDictionary();
+            DicAccessories = new AccessoryHandler().GetDictionary();
+            DicToppings = new ToppingHandler().GetDictionary();
+            DicPizza = new PizzaHandler().GetDictionary();
+            try
+            {
+                Basket = JsonConvert.DeserializeObject<List<Product>>(HttpContext.Session.GetString("basket"));
+            }
+            catch (ArgumentNullException ex) { }
+            if (new AccessoryHandler().Get(id) != null)
+            {
+                Basket.Add(new AccessoryHandler().Get(id));
+            }
             
-            
-            
+            HttpContext.Session.SetString("basket", JsonConvert.SerializeObject(Basket));
+            return RedirectToPage("MainMenu");
+        }
+
+        public IActionResult OnPostBuyp(string id)
+        {
+            //lav dette i onGet metode
+            //lav hvert object kald objected i button, save det, add det
+            DicMenu = new MenuHandler().GetDictionary();
+            DicAccessories = new AccessoryHandler().GetDictionary();
+            DicToppings = new ToppingHandler().GetDictionary();
+            DicPizza = new PizzaHandler().GetDictionary();
+            try
+            {
+                Basket = JsonConvert.DeserializeObject<List<Product>>(HttpContext.Session.GetString("basket"));
+            }
+            catch (ArgumentNullException ex) { }
+            if (new PizzaHandler().Get(id) != null)
+            {
+                Basket.Add(new PizzaHandler().Get(id));
+            }
+
+            HttpContext.Session.SetString("basket", JsonConvert.SerializeObject(Basket));
+            return RedirectToPage("MainMenu");
+        }
+
+        public IActionResult OnPostBuym(string id)
+        {
+            //lav dette i onGet metode
+            //lav hvert object kald objected i button, save det, add det
+            DicMenu = new MenuHandler().GetDictionary();
+            DicAccessories = new AccessoryHandler().GetDictionary();
+            DicToppings = new ToppingHandler().GetDictionary();
+            DicPizza = new PizzaHandler().GetDictionary();
+            try
+            {
+                Basket = JsonConvert.DeserializeObject<List<Product>>(HttpContext.Session.GetString("basket"));
+            }
+            catch (ArgumentNullException ex) { }
+            if (new MenuHandler().Get(id) != null)
+            {
+                Basket.Add(new MenuHandler().Get(id));
+            }
+
+            HttpContext.Session.SetString("basket", JsonConvert.SerializeObject(Basket));
+            return RedirectToPage("MainMenu");
         }
 
     }

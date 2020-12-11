@@ -42,7 +42,7 @@ namespace MadOrderingssystem.Services
                 }
                 if (toppings.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(toppings.ProductName, toppings);
+                    dicC.Add(toppings.Id, toppings);
                 }
             }
             return dicC;

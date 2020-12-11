@@ -1,3 +1,139 @@
 {
-
+  "3f8ded92-5d30-46b6-9975-78f428ae715b": {
+    "ID": "3f8ded92-5d30-46b6-9975-78f428ae715b",
+    "products": [],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": null,
+      "PhoneNumber": null,
+      "PostNumber": 0,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 100.0,
+    "BuyTakeAway": false
+  },
+  "42a12bfa-54c1-4f31-8dd7-6103bdbc8517": {
+    "ID": "42a12bfa-54c1-4f31-8dd7-6103bdbc8517",
+    "products": [
+      {
+        "Id": "d076e69d-bf7b-4df4-885c-41677383602f",
+        "IsSelsected": false,
+        "Price": 10.0,
+        "ProductName": "cola"
+      }
+    ],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": null,
+      "PhoneNumber": null,
+      "PostNumber": 0,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 10.0,
+    "BuyTakeAway": false
+  },
+  "703f9b3d-6568-4695-8aa9-da98508058f9": {
+    "ID": "703f9b3d-6568-4695-8aa9-da98508058f9",
+    "products": [
+      {
+        "Id": "05dcbdd2-a57c-49ab-bc48-4040397077bc",
+        "IsSelsected": false,
+        "Price": 100.0,
+        "ProductName": "accessory1 flase"
+      }
+    ],
+    "customer": null,
+    "TotalPrice": 100.0,
+    "BuyTakeAway": false
+  },
+  "2ecd6076-e786-4d63-b167-f04f2467cddc": {
+    "ID": "2ecd6076-e786-4d63-b167-f04f2467cddc",
+    "products": [
+      {
+        "Id": "05dcbdd2-a57c-49ab-bc48-4040397077bc",
+        "IsSelsected": false,
+        "Price": 100.0,
+        "ProductName": "accessory1 flase"
+      }
+    ],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": "kjhfksdlf",
+      "PhoneNumber": null,
+      "PostNumber": 0,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 100.0,
+    "BuyTakeAway": false
+  },
+  "ebd7b47a-4275-411f-a6f2-d223c77199c0": {
+    "ID": "ebd7b47a-4275-411f-a6f2-d223c77199c0",
+    "products": [
+      {
+        "Id": "d076e69d-bf7b-4df4-885c-41677383602f",
+        "IsSelsected": false,
+        "Price": 10.0,
+        "ProductName": "cola"
+      }
+    ],
+    "customer": null,
+    "TotalPrice": 10.0,
+    "BuyTakeAway": false
+  },
+  "7cc69bc0-8ec9-4334-9e59-0ebc498c76ca": {
+    "ID": "7cc69bc0-8ec9-4334-9e59-0ebc498c76ca",
+    "products": [
+      {
+        "Id": "532a95b2-8f16-4c62-a537-0d9c1330fb1c",
+        "IsSelsected": false,
+        "Price": 123.0,
+        "ProductName": "virker"
+      },
+      {
+        "Id": "fd27ff89-f08f-430f-9784-010be7327a44",
+        "IsSelsected": false,
+        "Price": 100.0,
+        "ProductName": "pizza1"
+      },
+      {
+        "Id": "d076e69d-bf7b-4df4-885c-41677383602f",
+        "IsSelsected": false,
+        "Price": 10.0,
+        "ProductName": "cola"
+      }
+    ],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": "Kallundborg",
+      "PhoneNumber": null,
+      "PostNumber": 4400,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 233.0,
+    "BuyTakeAway": false
+  }
 }

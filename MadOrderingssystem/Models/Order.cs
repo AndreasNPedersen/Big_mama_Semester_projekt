@@ -18,10 +18,7 @@ namespace MadOrderingssystem.Models
 		public bool BuyTakeAway{ get; set; }
 
 		public Order() {
-		foreach(Product product in products)
-            {
-				TotalPrice = TotalPrice + product.Price;
-            }
+		
 		} //default constructor
 
 		public Order(Customer newCustomer, List<Product> newProducts)

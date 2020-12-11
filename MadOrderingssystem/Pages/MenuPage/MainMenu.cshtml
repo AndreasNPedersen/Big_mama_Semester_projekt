@@ -7,23 +7,46 @@
       
 <div>
     <div class="row">
-        <div class="col-sm">
-            One of three columns //filter
+        <div class="col-sm text-center">
+            <h3 class="text-center">Søgning</h3>
+            <form>
+                Søg: <input type="text" asp-for="filtersøgning" />
+                <button type="submit" value="Filter">Søg</button>
+                <br />
+                <p></p>
+                Søg på det du ikke ville have med i din pizza: <input type="text" asp-for="filtersøgningIngredienser" />
+                <button type="submit" value="Filter">Søg</button>
+            </form>
         </div>
         <div class="col-sm">
             <h3 class="text-center">Menuer</h3>
             @foreach (Menu menu in Model.DicMenu.Values)
             {
-                <div class="card m-3">
-                    <div class="card-header">
-                        <p>Navn:@menu.ProductName</p>
-                        <p>Pris:@menu.Price</p>
-                        <p>ID: @menu.Id</p>
-                        <div class="card-footer text-center">
-                        </div>
-                    </div>
+        <div class="card m-3">
+            <div class="card-header">
+                <p>Navn:@menu.ProductName</p>
+                <p>Pris:@menu.Price</p>
+                <p>Menuen indeholder Pizzaer og Tilbehør</p>
+                <p>Pizzaer</p>
+                @foreach (Pizza pizza in menu.Pizzas)
+                {
+                    <p>pizzaens navn: @pizza.ProductName</p>
+                    <p>pizzaens indhold: @pizza.Ingrediense</p>
+                }
+                <p>Tilbehør</p>
+                @foreach (Accessory acc in menu.Accesories)
+                {
+                    <p>tilbehørets navn: @acc.ProductName</p>
+                }
+                <div class="card-footer text-center">
+                    <form method="post">
+                        <button type="submit" asp-page-handler="Buym" asp-route-id="@menu.Id" class="btn-success">Køb</button>
+                    </form>
                 </div>
-            }<h3 class="text-center">Pizzaer</h3>
+            </div>
+        </div>
+            }
+            <h3 class="text-center">Pizzaer</h3>
 
             @foreach (Pizza pizza in Model.DicPizza.Values)
             {
@@ -31,24 +54,11 @@
                     <div class="card-header">
                         <p>Navn:@pizza.ProductName</p>
                         <p>Pris:@pizza.Price</p>
-                        <p>Ingredienser: @pizza.Ingrediense</p>
-                        @foreach (Toppings topping in Model.DicToppings.Values)
-                        {
-                            <p>@topping.ProductName:</p>
-                            <input type="checkbox" asp-for="@topping.IsSelsected" />
-                            <p>for: @topping.Price DKK</p>
-                        }
+                        <p>Ingredienser:@pizza.Ingrediense</p>
                         <div class="card-footer text-center">
                             <form method="post">
-                                <input type="hidden" asp-for="@pizza.Id" />
-                                <input type="hidden" asp-for="@pizza.Ingrediense" />
-                                <input type="hidden" asp-for="@pizza.IsSelsected" />
-                                <input type="hidden" asp-for="@pizza.Price" />
-                                <input type="hidden" asp-for="@pizza.ProductName" />
-                                <input type="hidden" asp-for="@pizza.Size" />
-                                <input type="hidden" asp-for="@pizza.Topping" />
+                                <button type="submit" asp-page-handler="Buyp" asp-route-id="@pizza.Id" class="btn-success">Køb</button>
                             </form>
-                            <button type="submit" asp-page-handler="Basket">Køb</button>
                         </div>
                     </div>
                 </div>
@@ -60,27 +70,34 @@
                         <p>Navn:@accessory.ProductName</p>
                         <p>Pris:@accessory.Price</p>
                         <div class="card-footer text-center">
-                            <form>
-                                <button type="submit" class="btn-success" asp-page-handler="buy" asp-route-id="@accessory.Id">Køb</button>
+                            <form method="post" >
+                                <button type="submit" asp-page-handler="Buya" asp-route-id="@accessory.Id" class="btn-success">Køb</button>
                             </form>
                         </div>
                     </div>
                 </div>
             }
 
-        </div>//Menu
+        </div>
         <div class="col-sm">
             <h3 class="text-center">Indkøbskurv</h3>
             @if (Model.Basket != null)
             {
-            @foreach (Product product in Model.Basket)
-            {
-                <ul>
-                    <li>Navn: @product.ProductName</li>
-                    <li>Pris: @product.Price</li>
-                </ul>
-                <br />
-            }}
+                @foreach (Product product in Model.Basket)
+                {
+                    <ul>
+                        <li>Navn: @product.ProductName</li>
+                        <li>Pris: @product.Price</li>
+                    </ul>
+                    <br />
+                }
+        <form>
+            <button type="submit" asp-page="/OrderPage/AddOrder" class="btn-success">Til indkøbskurv</button>
+        </form>
+            }
+
+            
+
         </div>
     </div>
 </div>

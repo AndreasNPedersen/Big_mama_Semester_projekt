@@ -42,7 +42,15 @@ namespace MadOrderingssystem.Services
                 }
                 if (pizza.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dicC.Add(pizza.ProductName, pizza);
+                    dicC.Add(pizza.Id, pizza);
+                }
+                if (filter.StartsWith("true"))
+                {
+                    
+                    if (!pizza.Ingrediense.ToLower().Contains(filter.Remove(0,4).ToLower()))
+                    {
+                        dicC.Add(pizza.Id, pizza);
+                    }
                 }
             }
             return dicC;

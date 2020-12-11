@@ -1,4 +1,50 @@
 ﻿@page
 @model MadOrderingssystem.Pages.OrderPage.AddOrderModel
 @{
+    ViewData["Title"] = "Indkøbskurv";
+    @using MadOrderingssystem.Models;
 }
+<div class="container">
+    <form class="form-group" method="post">
+
+        <label class="form-text">Kunde</label>
+        @if (Model.CustomerSession != null)
+        {
+            <input type="text" readonly class="form-control" asp-for="@Model.CustomerSession" />
+            <input type="radio" class="form-control" asp-for="@Model.Order.BuyTakeAway" />
+        }
+        else
+        {
+            <p>Skriv din adresse</p>
+            <input type="text" asp-for="@Model.Customer.Address" />
+            <span asp-validation-for="@Model.Customer.Address" class="text-danger"></span>
+            <p>Skriv dit postnummer</p>
+            <input type="text" asp-for="@Model.Customer.PostNumber" />
+            <span asp-validation-for="@Model.Customer.PostNumber" class="text-danger"></span>
+        }
+
+
+        <label class="form-text">Produkter</label>
+        
+            @for (int i = 0; i < Model.Order.products.Count(); i++)
+            {
+                <Label>@Model.Order.products[i].ProductName </Label>
+                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Id" />
+                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Price" />
+                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].ProductName" />
+            }
+        
+        
+
+
+        <label class="form-text">Total pris (DKK)</label>
+        <input type="text" readonly class="form-control" asp-for="@Model.Order.TotalPrice" />
+
+        <div style="padding:1rem;"></div>
+        <input type="submit" class="btn btn-danger float-right" value="Køb" placeholder="Køb" style="padding:1rem;" />
+    </form>
+<div>
+    <a asp-page="/MenuPage/MainMenu">Tilbage til Menu</a>
+</div>
+</div>
+
