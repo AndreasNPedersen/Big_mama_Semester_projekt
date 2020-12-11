@@ -10,7 +10,11 @@ namespace MadOrderingssystem.Services
 {
     public class AccessoryHandler : IManagement<Accessory>
     {
+<<<<<<< HEAD
         private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessories.json";
+=======
+        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataAccessories.json";
+>>>>>>> 5292a5178b673545a7ebf60df583e81a3f07d43f
         public void Create(Accessory accessory)
         {
             JsonAccessory jsonAccessory = new JsonAccessory();

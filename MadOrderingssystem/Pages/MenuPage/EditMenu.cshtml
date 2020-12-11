@@ -2,24 +2,65 @@
 @model MadOrderingssystem.Pages.MenuPage.EditMenuModel
 @{
     ViewData["Title"] = "Rediger Menu";
+    @using MadOrderingssystem.Models;
 }
 <div class="container">
-    <form class="form-group" method="post">
-        <div asp-validation-summary="ModelOnly"></div>
-        <label class="form-text">Name</label>
-        <input type="text" class="form-control" asp-for="@Model.Menu.ProductName" />
-        <span asp-validation-for="@Model.Menu.ProductName" class="text-danger"></span>
-        <label class="form-text">Pris</label>
-        <input type="text" class="form-control" asp-for="@Model.Menu.Price" />
-        <span asp-validation-for="@Model.Menu.Price" class="text-danger"></span>
-        <label class="form-text">Id</label>
-        <input type="text" class="form-control" asp-for="@Model.Menu.Id" />
-        <span asp-validation-for="@Model.Menu.Id" class="text-danger"></span>
+    @if (Model.CustomerSession != null)
+    {
+        @if (Model.CustomerSession.Role == Models.Roles.Management)
+        {
+            <form class="form-group" method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                <label class="form-text">Name</label>
+                <input type="text" class="form-control" asp-for="@Model.Menu.ProductName" />
+                <span asp-validation-for="@Model.Menu.ProductName" class="text-danger"></span>
+                <label class="form-text">Pris</label>
+                <input type="text" class="form-control" asp-for="@Model.Menu.Price" />
+                <span asp-validation-for="@Model.Menu.Price" class="text-danger"></span>
+                <label class="form-text">Id</label>
+                <input type="text" readonly class="form-control" asp-for="@Model.Menu.Id" />
+                <span asp-validation-for="@Model.Menu.Id" class="text-danger"></span>
 
-        <input type="submit" class="btn btn-success float-right" value="Rediger Menu" placeholder="Ændre" style="padding:1rem;" />
-    </form>
+                <div class="form-group">
+                    <label class="form-text">vælg hvilke Pizzaer</label>
+                    @foreach (Pizza pizza in Model.DicPizzas.Values)
+                    {
+                        <p>@pizza.ProductName:</p>
+                        <input asp-for="@Model.DicPizzas[pizza.Id].IsSelsected" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Id" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Ingrediense" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Price" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].ProductName" />
+                        <input type="hidden" asp-for="@Model.DicPizzas[pizza.Id].Size" />
+                    }
+
+                </div>
+                <div class="form-group">
+                    <label class="form-text">vælg hvilke Tilbehør</label>
+                    @foreach (Accessory accessory in Model.DicAccessories.Values)
+                    {
+                        <p>@accessory.ProductName:</p>
+                        <input asp-for="@Model.DicAccessories[accessory.Id].IsSelsected" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].Id" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].Price" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].ProductName" />
+                        <input type="hidden" asp-for="@Model.DicAccessories[accessory.Id].IsAlcohol" />
+                    }
+                </div>
+
+                <input type="submit" class="btn btn-success float-right" value="Rediger Menu" placeholder="Ændre" style="padding:1rem;" />
+            </form>
+            <div>
+                <a asp-page="MenuTable">Tilbage til Menu listen</a>
+            </div>
+        }
+    }
+    else 
+    { 
+        <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
     <div>
-        <a asp-page="MenuTable">Tilbage til Menu listen</a>
+        <a class="text-center" asp-page="/Login/log_in">Login med din bruger</a>
     </div>
+    }
 
 </div>

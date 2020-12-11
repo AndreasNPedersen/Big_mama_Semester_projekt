@@ -24,34 +24,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/MenuPage/MainMenu">Menu</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/MenuPage/MenuTable">Table</a>
-                        </li>
-                        <li id="dropdownmenu" class="btn-group">
-                            <button type="button" class="btn btn-light" href="/MenuPage/EditMenu">Kontrol Panel</button>
-                            <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/MenuPage/AddPizzaPage">Tilføj Pizza</a>
-                                <a class="dropdown-item" href="/MenuPage/EditPizza">Ændr Pizza</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MenuPage/AddAccessoryPage">Tilføj Tilbehør</a>
-                                <a class="dropdown-item" href="/MenuPage/EditAccessory">Ændr Tilbehør</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MenuPage/AddToppingsPage">Tilføj Topping</a>
-                                <a class="dropdown-item" href="/MenuPage/EditToppings">Ændr Topping</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/MenuPage/AddMenu">Tilføj Menu</a>
-                                <a class="dropdown-item" href="/MenuPage/EditMenu">Ændr Menu</a>
-                                <a class="dropdown-item" href="/MenuPage/DeletePage">Slet Menu</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/OrderPage/AddOrder">Tilføj ordre</a>
-                                <a class="dropdown-item" href="/OrderPage/EditOrder">Ændr ordre</a>
-                                <a class="dropdown-item" href="/OrderPage/DeleteOrder">Slet ordre</a>
-                                <a class="dropdown-item" href="/OrderPage/AddOrder">Se ordreliste</a>
-                            </div>
-                        </li>
+                                <li id="dropdownmenu" class="btn-group">
+                                    <button type="button" class="btn btn-light" href="/MenuPage/MenuTable">Kontrol Panel</button>
+                                    <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="/MenuPage/MenuTable">Menu Listen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/MenuPage/AddPizzaPage">Tilføj Pizza</a>
+                                        <a class="dropdown-item" href="/MenuPage/AddAccessoryPage">Tilføj Tilbehør</a>
+                                        <a class="dropdown-item" href="/MenuPage/AddToppingsPage">Tilføj Topping</a>
+                                        <a class="dropdown-item" href="/MenuPage/AddMenu">Tilføj Menu</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/OrderPage/OrderList">Se Ordreliste</a>
+                                        <a class="dropdown-item" href="/Login/LoginList">Se Loginliste</a>
+                                    </div>
+                                </li>
                         <li id="dropdownmenu" class="btn-group">
                             <button type="button" class="btn btn-light" href="/Login/log_in">Login</button>
                             <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -76,7 +65,7 @@
         </main>
     </div>
 
-    
+
     <footer class="container border-top text-muted">
         <div class="row">
             <div class="col-sm">
