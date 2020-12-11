@@ -17,7 +17,7 @@ namespace MadOrderingssystem.Services
     {
         //change when using other data route
 
-        private string filePathCustomer = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
+        private string filePathCustomer = @"C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataCustomer.json";
 
         public void Create(Customer customer)
         {

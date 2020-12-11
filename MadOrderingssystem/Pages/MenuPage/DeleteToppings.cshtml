@@ -1,0 +1,45 @@
+﻿@page "{id}"
+@model MadOrderingssystem.Pages.MenuPage.DeleteToppingsModel
+@{
+    ViewData["Title"] = "Topping Delete";
+    @using MadOrderingssystem.Models;
+}
+
+@if (Model.CustomerSession != null)
+{
+    @if (Model.CustomerSession.Role == Models.Roles.Management)
+    {
+        <div class="container">
+
+            <h1 class="text-center"> Er du sikker på at slette Toppingen?</h1>
+
+            <form class="form-group" method="post">
+                <label class="form-text">Navn</label>
+                <input type="text" readonly class="form-control" asp-for="@Model.Topping.ProductName" />
+                <span asp-validation-for="@Model.Topping.ProductName" class="text-danger"></span>
+
+                <label class="form-text">Pris</label>
+                <input type="text" readonly class="form-control" asp-for="@Model.Topping.Price" />
+                <span asp-validation-for="@Model.Topping.Price" class="text-danger"></span>
+
+                <label class="form-text">Id</label>
+                <input type="text" readonly class="form-control" asp-for="@Model.Topping.Id" />
+                <span asp-validation-for="@Model.Topping.Id" class="text-danger"></span>
+
+                <div style="padding:1rem;"></div>
+                <input type="submit" class="btn btn-danger float-right" value="Slet Topping" placeholder="Delete" style="padding:1rem;" />
+            </form>
+
+            <div>
+                <a asp-page="MenuTable">Tilbage til Menu listen</a>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+    <div>
+        <a asp-page="/Login/log_in">Login med din bruger</a>
+    </div>
+}

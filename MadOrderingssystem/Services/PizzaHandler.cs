@@ -11,7 +11,7 @@ namespace MadOrderingssystem.Services
     public class PizzaHandler : IManagement<Pizza>
     {
 
-        private string filePath = @"C:\Users\andre\Desktop\Zealand  Datamatiker\1 Semester\Semester Projekt\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
+        private string filePath = @"C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
 
         public void Create(Pizza pizza)
         {
