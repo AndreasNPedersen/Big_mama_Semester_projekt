@@ -27,6 +27,7 @@ namespace MadOrderingssystem.Pages.Login
 
         public IActionResult OnPost()
         {
+
             CustomerHandler customerHandler = new CustomerHandler();
             Customer=customerHandler.Get(Email, Password);
             if (Customer != null)
