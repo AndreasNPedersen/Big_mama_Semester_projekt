@@ -54,7 +54,14 @@ namespace MadOrderingssystem.Services
         {
             JsonTopping jsonTopping = new JsonTopping();
             Dictionary<string, Toppings> dic = jsonTopping.ReadJsonFile(filePath);
-            return dic[id];
+            try
+            {
+                return dic[id];
+            } catch (KeyNotFoundException ex)
+            {
+                Console.WriteLine("KeyNotFound " + ex.Message);
+                return null;
+            }
         }
 
         public Dictionary<string, Toppings> GetDictionary()

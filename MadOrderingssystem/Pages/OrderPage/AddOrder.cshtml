@@ -10,8 +10,22 @@
         <label class="form-text">Kunde</label>
         @if (Model.CustomerSession != null)
         {
-            <input type="text" readonly class="form-control" asp-for="@Model.CustomerSession" />
-            <input type="radio" class="form-control" asp-for="@Model.Order.BuyTakeAway" />
+            <p> Kunde: @Model.CustomerSession.Name</p>
+            <input type="hidden" asp-for="@Model.CustomerSession.ID" />
+            <input type="hidden" asp-for="@Model.CustomerSession.Name" />
+            <input type="hidden" asp-for="@Model.CustomerSession.LastName" />
+            <input type="hidden" asp-for="@Model.CustomerSession.PhoneNumber" />
+            <input type="hidden" asp-for="@Model.CustomerSession.PostNumber" />
+            <input type="hidden" asp-for="@Model.CustomerSession.Role" />
+            <input type="hidden" asp-for="@Model.CustomerSession.Address" />
+            <input type="hidden" asp-for="@Model.CustomerSession.CustomerDiscount" />
+            <input type="hidden" asp-for="@Model.CustomerSession.Date" />
+            <input type="hidden" asp-for="@Model.CustomerSession.Email" />
+            <br />
+            if (Model.CustomerSession.Role == Roles.SalesPerson)
+            {
+            <p>Er det til bordbestilling?</p> <input asp-for="@Model.Order.BuyTakeAway" />
+            }
         }
         else
         {

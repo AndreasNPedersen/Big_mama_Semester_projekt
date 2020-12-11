@@ -33,8 +33,8 @@ namespace MadOrderingssystem.Pages.Login
         {
             if (ModelState.IsValid)
             {
-                if (Customer.Role == 0) { Customer.Role = Roles.Customer; Customer.CustomerDiscount = true; }
-
+                
+                Customer.CustomerDiscount = true;
                 CustomerHandler cH = new CustomerHandler();
                 cH.Create(Customer);
 

@@ -62,7 +62,15 @@ namespace MadOrderingssystem.Services
         {
             JsonPizza jsonPizza = new JsonPizza();
             Dictionary<string, Pizza> dic = jsonPizza.ReadJsonFile(filePath);
-            return dic[id];
+            try
+            {
+                return dic[id];
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Console.WriteLine("KeyNotFound " + ex.Message);
+                return null;
+            }
         }
 
         public Dictionary<string, Pizza> GetDictionary()

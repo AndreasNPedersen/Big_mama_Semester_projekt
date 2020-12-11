@@ -54,7 +54,15 @@ namespace MadOrderingssystem.Services
         {
             JsonAccessory jsonAccessory = new JsonAccessory();
             Dictionary<string, Accessory> dic = jsonAccessory.ReadJsonFile(filePath);
-            return dic[id];
+            try
+            {
+                return dic[id];
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Console.WriteLine("KeyNotFound " + ex.Message);
+                return null;
+            }
         }
 
         public Dictionary<string, Accessory> GetDictionary()

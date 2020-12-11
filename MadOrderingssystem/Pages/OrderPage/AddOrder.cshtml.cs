@@ -17,6 +17,7 @@ namespace MadOrderingssystem.Pages.OrderPage
         public Order Order { get; set; } = new Order();
         [BindProperty]
         public Customer Customer { get; set; }
+        [BindProperty]
         public Customer CustomerSession {get;set;}
         public List<Product> OrderListBasketSession { get; set; }
         public IActionResult OnGet()
@@ -49,6 +50,7 @@ namespace MadOrderingssystem.Pages.OrderPage
             if (CustomerSession != null)
             {
                 Order.customer = CustomerSession;
+                Order.TotalPrice = Order.TotalPrice * 0.85;
             }
             else
             {

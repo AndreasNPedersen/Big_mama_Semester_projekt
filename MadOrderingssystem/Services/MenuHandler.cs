@@ -54,7 +54,15 @@ namespace MadOrderingssystem.Services
         {
             JsonMenu jsonMenu = new JsonMenu();
             Dictionary<string, Menu> dic = jsonMenu.ReadJsonFile(filePath);
-            return dic[id];
+            try
+            {
+                return dic[id];
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Console.WriteLine("KeyNotFound " + ex.Message);
+                return null;
+            }
         }
 
         public Dictionary<string, Menu> GetDictionary()

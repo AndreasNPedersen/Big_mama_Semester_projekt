@@ -98,5 +98,115 @@
     "customer": null,
     "TotalPrice": 233.0,
     "BuyTakeAway": false
+  },
+  "903c3377-52eb-4a5b-8fa3-17e8b2a0a3ca": {
+    "ID": "903c3377-52eb-4a5b-8fa3-17e8b2a0a3ca",
+    "products": [
+      {
+        "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
+        "IsSelsected": false,
+        "Price": 1234.0,
+        "ProductName": "lsitesterlige12345999"
+      }
+    ],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": "duhas",
+      "PhoneNumber": null,
+      "PostNumber": 0,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 1234.0,
+    "BuyTakeAway": false
+  },
+  "abac83cf-4f3f-4641-98eb-04d98cf81239": {
+    "ID": "abac83cf-4f3f-4641-98eb-04d98cf81239",
+    "products": [
+      {
+        "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
+        "IsSelsected": false,
+        "Price": 1234.0,
+        "ProductName": "lsitesterlige12345999"
+      }
+    ],
+    "customer": {
+      "Name": null,
+      "LastName": null,
+      "Email": null,
+      "Password": null,
+      "Address": null,
+      "PhoneNumber": null,
+      "PostNumber": 0,
+      "ID": null,
+      "Role": 0,
+      "CustomerDiscount": false,
+      "Date": "0001-01-01T00:00:00"
+    },
+    "TotalPrice": 1234.0,
+    "BuyTakeAway": true
+  },
+  "8cc2988e-981d-4c04-b29a-c3ba2dce5a1e": {
+    "ID": "8cc2988e-981d-4c04-b29a-c3ba2dce5a1e",
+    "products": [
+      {
+        "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
+        "IsSelsected": false,
+        "Price": 1234.0,
+        "ProductName": "lsitesterlige12345999"
+      }
+    ],
+    "customer": {
+      "Name": "asd",
+      "LastName": "asd",
+      "Email": "asd",
+      "Password": null,
+      "Address": "asd",
+      "PhoneNumber": "asd",
+      "PostNumber": 123,
+      "ID": "d369a94c-f1f2-471a-9bf2-d14c57756bf3",
+      "Role": 1,
+      "CustomerDiscount": true,
+      "Date": "2020-12-07T11:34:21.802"
+    },
+    "TotalPrice": 1048.8999999999999,
+    "BuyTakeAway": false
+  },
+  "d48620aa-128a-4a0f-8b3f-4194e7767e12": {
+    "ID": "d48620aa-128a-4a0f-8b3f-4194e7767e12",
+    "products": [
+      {
+        "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
+        "IsSelsected": false,
+        "Price": 1234.0,
+        "ProductName": "lsitesterlige12345999"
+      },
+      {
+        "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
+        "IsSelsected": false,
+        "Price": 1234.0,
+        "ProductName": "lsitesterlige12345999"
+      }
+    ],
+    "customer": {
+      "Name": "asd",
+      "LastName": "asd",
+      "Email": "asd",
+      "Password": null,
+      "Address": "asd",
+      "PhoneNumber": "asd",
+      "PostNumber": 123,
+      "ID": "d369a94c-f1f2-471a-9bf2-d14c57756bf3",
+      "Role": 1,
+      "CustomerDiscount": true,
+      "Date": "2020-12-07T11:34:21"
+    },
+    "TotalPrice": 2097.7999999999997,
+    "BuyTakeAway": false
   }
 }
