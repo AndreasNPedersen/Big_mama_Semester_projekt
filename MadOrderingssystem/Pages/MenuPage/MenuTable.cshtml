@@ -5,167 +5,180 @@
     @using MadOrderingssystem.Models;
 }
 
-<h1 class="text-center">Menu Tabel</h1>
-<p class="text-center"></p>
-<h3>Menuer</h3>
+@if (Model.CustomerSession != null)
+{
+    @if (Model.CustomerSession.Role == Models.Roles.Management)
+    {
+        <h1 class="text-center">Menu Tabel</h1>
+        <p class="text-center"></p>
+        <h3>Menuer</h3>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Navn
-            </th>
-            <th>
-                Pris
-            </th>
-            <th>
-                Pizzaer
-            </th>
-            <th>
-                Tilbehør
-            </th>
-            <th>
-                Kontrol
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Menu menu in Model.DicMenu.Values)
-        {
-            <tr>
-                <td>
-                    @menu.Id
-                </td>
-                <td>
-                    @menu.ProductName
-                </td>
-                <td>
-                    @menu.Price
-                </td>
-                <td>
-                    @foreach (Pizza pizza in menu.Pizzas)
-                    {
-                        @pizza.ProductName
-                    },
-                </td>
-                <td>
-                    @foreach (Accessory accessory in menu.Accesories)
-                    {
-                        @accessory.ProductName
-                    },
-                </td>
-                <td>
-                    <p>
-                        <a asp-page="EditMenu" asp-route-id="@menu.Id">Edit</a> |
-                        <a asp-page="DeletePage" asp-route-id="@menu.Id">Delete</a>
-                    </p>
-                </td>
-            </tr>
-        }
-    </tbody>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Navn
+                    </th>
+                    <th>
+                        Pris
+                    </th>
+                    <th>
+                        Pizzaer
+                    </th>
+                    <th>
+                        Tilbehør
+                    </th>
+                    <th>
+                        Kontrol
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Menu menu in Model.DicMenu.Values)
+                {
+                    <tr>
+                        <td>
+                            @menu.Id
+                        </td>
+                        <td>
+                            @menu.ProductName
+                        </td>
+                        <td>
+                            @menu.Price
+                        </td>
+                        <td>
+                            @foreach (Pizza pizza in menu.Pizzas)
+                            {
+                                @pizza.ProductName
+                            },
+                        </td>
+                        <td>
+                            @foreach (Accessory accessory in menu.Accesories)
+                            {
+                                @accessory.ProductName
+                            },
+                        </td>
+                        <td>
+                            <p>
+                                <a asp-page="EditMenu" asp-route-id="@menu.Id">Edit</a> |
+                                <a asp-page="DeletePage" asp-route-id="@menu.Id">Delete</a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-</table>
-<br />
-<h3>Pizzaer</h3>
+        </table>
+        <br />
+        <h3>Pizzaer</h3>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Navn
-            </th>
-            <th>
-                Pris
-            </th>
-            <th>
-                Size
-            </th>
-            <th>
-                Ingedienser
-            </th>
-            <th>
-                Kontrol
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Pizza pizza in Model.DicPizza.Values)
-        {
-            <tr>
-                <td>
-                    @pizza.Id
-                </td>
-                <td>
-                    @pizza.ProductName
-                </td>
-                <td>
-                    @pizza.Price
-                </td>
-                <td>
-                    @pizza.Size
-                </td>
-                <td>
-                   @pizza.Ingrediense
-                </td>
-                <td>
-                    <p>
-                        <a asp-page="EditMenu" asp-route-id="@pizza.Id">Edit</a> |
-                        <a asp-page="DeletePage" asp-route-id="@pizza.Id">Delete</a>
-                    </p>
-                </td>
-            </tr>
-        }
-    </tbody>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Navn
+                    </th>
+                    <th>
+                        Pris
+                    </th>
+                    <th>
+                        Size
+                    </th>
+                    <th>
+                        Ingedienser
+                    </th>
+                    <th>
+                        Kontrol
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Pizza pizza in Model.DicPizza.Values)
+                {
+                    <tr>
+                        <td>
+                            @pizza.Id
+                        </td>
+                        <td>
+                            @pizza.ProductName
+                        </td>
+                        <td>
+                            @pizza.Price
+                        </td>
+                        <td>
+                            @pizza.Size
+                        </td>
+                        <td>
+                            @pizza.Ingrediense
+                        </td>
+                        <td>
+                            <p>
+                                <a asp-page="EditPizza" asp-route-id="@pizza.Id">Edit</a> |
+                                <a asp-page="DeletePage" asp-route-id="@pizza.Id">Delete</a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-</table>
-<br />
+        </table>
+        <br />
 
-<h3>Tilbehør</h3>
+        <h3>Tilbehør</h3>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Navn
-            </th>
-            <th>
-                Pris
-            </th>
-            <th>
-                Kontrol
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Accessory accessory in Model.DicAccessories.Values)
-        {
-            <tr>
-                <td>
-                    @accessory.Id
-                </td>
-                <td>
-                    @accessory.ProductName
-                </td>
-                <td>
-                    @accessory.Price
-                </td>
-                <td>
-                    <p>
-                        <a asp-page="EditMenu" asp-route-id="@accessory.Id">Edit</a> |
-                        <a asp-page="DeletePage" asp-route-id="@accessory.Id">Delete</a>
-                    </p>
-                </td>
-            </tr>
-        }
-    </tbody>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Navn
+                    </th>
+                    <th>
+                        Pris
+                    </th>
+                    <th>
+                        Kontrol
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Accessory accessory in Model.DicAccessories.Values)
+                {
+                    <tr>
+                        <td>
+                            @accessory.Id
+                        </td>
+                        <td>
+                            @accessory.ProductName
+                        </td>
+                        <td>
+                            @accessory.Price
+                        </td>
+                        <td>
+                            <p>
+                                <a asp-page="EditAccessory" asp-route-id="@accessory.Id">Edit</a> |
+                                <a asp-page="DeletePage" asp-route-id="@accessory.Id">Delete</a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-</table>
+        </table>
+    }
+}
+else
+{
+    <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+    <div>
+        <a class="text-center" asp-page="/Login/log_in">Login med din bruger</a>
+    </div>
+}

@@ -25,16 +25,23 @@
 
 
         <label class="form-text">Produkter</label>
-        
-            @for (int i = 0; i < Model.Order.products.Count(); i++)
+
+        @for (int i = 0; i < Model.Order.products.Count(); i++)
+        {
+            <Label>@Model.Order.products[i].ProductName </Label>
+            <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Id" />
+            <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Price" />
+            <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].ProductName" />
+        }
+
+        @if (Model.CustomerSession != null)
+        {
+            @if (Model.CustomerSession.Role == Models.Roles.Management)
             {
-                <Label>@Model.Order.products[i].ProductName </Label>
-                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Id" />
-                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].Price" />
-                <input type="hidden" class="form-control" asp-for="@Model.Order.products[i].ProductName" />
+                <label class="form-text">Bestil til bord</label>
+                <input type="radio"class="form-control" asp-for="@Model.Order.BuyTakeAway" />
             }
-        
-        
+        }
 
 
         <label class="form-text">Total pris (DKK)</label>

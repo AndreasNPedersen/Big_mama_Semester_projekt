@@ -5,56 +5,69 @@
     @using MadOrderingssystem.Models;
 }
 
-<h1 class="text-center">Order Tabel</h1>
-<p class="text-center"></p>
-<h3>Orders</h3>
+@if (Model.CustomerSession != null)
+{
+    @if (Model.CustomerSession.Role == Models.Roles.Management)
+    {
+        <h1 class="text-center">Order Tabel</h1>
+        <p class="text-center"></p>
+        <h3>Orders</h3>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Produkter
-            </th>
-            <th>
-                Kunde
-            </th>
-            <th>
-                Total pris (DKK)
-            </th>
-            <th>
-                Kontrol
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Order order in Model.OrderListTable.Values)
-        {
-        <tr>
-            <td>
-                @order.ID
-            </td>
-            <td>
-                <ul>
-                    @foreach (Product products in order.products)
-                    {
-                        <li>@products.ProductName</li>
-                    }
-                </ul>
-            </td>
-            <td>
-                @order.TotalPrice
-            </td>
-            <td>
-                <p>
-                    <a asp-page="EditOrder" asp-route-id="@order.ID">Redigere</a> |
-                    <a asp-page="DeleteOrder" asp-route-id="@order.ID">Slet</a>
-                </p>
-            </td>
-        </tr>
-        }
-    </tbody>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Produkter
+                    </th>
+                    <th>
+                        Kunde
+                    </th>
+                    <th>
+                        Total pris (DKK)
+                    </th>
+                    <th>
+                        Kontrol
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Order order in Model.OrderListTable.Values)
+                {
+                    <tr>
+                        <td>
+                            @order.ID
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (Product products in order.products)
+                                {
+                                    <li>@products.ProductName</li>
+                                }
+                            </ul>
+                        </td>
+                        <td>
+                            @order.TotalPrice
+                        </td>
+                        <td>
+                            <p>
+                                <a asp-page="EditOrder" asp-route-id="@order.ID">Redigere</a> |
+                                <a asp-page="DeleteOrder" asp-route-id="@order.ID">Slet</a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-</table>
+        </table>
+    }
+}
+else
+{
+    <h1 class="text-center" style="font-family:'Times New Roman', Times, serif"> Du er ikke logget ind</h1>
+    <div>
+        <a class="text-center" asp-page="/Login/log_in">Login med din bruger</a>
+    </div>
+}
