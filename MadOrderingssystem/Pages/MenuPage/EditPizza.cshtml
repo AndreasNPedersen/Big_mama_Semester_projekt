@@ -1,4 +1,28 @@
 ﻿@page
 @model MadOrderingssystem.Pages.MenuPage.EditPizzaModel
 @{
+    ViewData["Title"] = "Rediger Pizza";
 }
+<div class="container">
+    <form class="form-group" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+        <label class="form-text">Name</label>
+        <input type="text" class="form-control" asp-for="@Model.Pizza.ProductName" />
+        <span asp-validation-for="@Model.Pizza.ProductName" class="text-danger"></span>
+        <label class="form-text">Indgredienser</label>
+        <input type="text" class="form-control" asp-for="@Model.Pizza.Ingrediense" />
+        <span asp-validation-for="@Model.Pizza.Ingrediense" class="text-danger"></span>
+        <label class="form-text">Pris</label>
+        <input type="text" class="form-control" asp-for="@Model.Pizza.Price" />
+        <span asp-validation-for="@Model.Pizza.Price" class="text-danger"></span>
+        <label class="form-text">Id</label>
+        <input type="number" class="form-control" asp-for="@Model.Pizza.Id" />
+        <span asp-validation-for="@Model.Pizza.Id" class="text-danger"></span>
+
+        <input type="submit" class="btn btn-success float-right" value="Rediger Pizza" placeholder="Ændre" style="padding:1rem;" />
+    </form>
+    <div>
+        <a asp-page="MenuTable">Tilbage til Menu listen</a>
+    </div>
+
+</div>
