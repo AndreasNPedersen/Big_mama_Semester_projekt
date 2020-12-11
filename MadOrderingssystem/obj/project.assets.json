@@ -52,19 +52,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mukke\\.nuget\\packages\\": {}
+    "C:\\Users\\trium\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mukke\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
       "projectName": "MadOrderingssystem",
-      "projectPath": "C:\\Users\\mukke\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
-      "packagesPath": "C:\\Users\\mukke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mukke\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\obj\\",
+      "projectPath": "D:\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
+      "packagesPath": "C:\\Users\\trium\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mukke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\trium\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

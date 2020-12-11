@@ -153,7 +153,6 @@ D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netco
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataCustomer.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataOrders.json
-D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataProducts.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.exe
 D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\MadOrderingssystem.deps.json
@@ -230,3 +229,11 @@ C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditAccessory.cshtml.g.cs
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditPizza.cshtml.g.cs
 C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditToppings.cshtml.g.cs
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataAccessories.json
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataMenu.json
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataPizza.json
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\bin\Debug\netcoreapp3.1\Data\DataToppings.json
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\AddToppingsPage.cshtml.g.cs
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditAccessory.cshtml.g.cs
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditPizza.cshtml.g.cs
+D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\obj\Debug\netcoreapp3.1\Razor\Pages\MenuPage\EditToppings.cshtml.g.cs

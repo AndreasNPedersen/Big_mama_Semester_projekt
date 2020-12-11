@@ -15,13 +15,19 @@ namespace MadOrderingssystem.Pages.MenuPage
     {
 
         public Customer CustomerSession { get; set; }
-
         [BindProperty]
+        public Dictionary<string, Pizza> DicPizzas { get; set; }
+        [BindProperty]
+        public Dictionary<string, Accessory> DicAccessories { get; set; }
+        [BindProperty]
+       
         public Menu Menu { get; set; }
 
 
         public void OnGet(string id)
         {
+            DicPizzas = new PizzaHandler().GetDictionary();
+            DicAccessories = new AccessoryHandler().GetDictionary();
             MenuHandler mH = new MenuHandler();
             Menu = mH.Get(id);
             try
@@ -35,17 +41,31 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
+                List<Pizza> productChoosenP = new List<Pizza>();
+                List<Accessory> productChoosenA = new List<Accessory>();
+                foreach (Pizza product in DicPizzas.Values)
+                {
+                    if (product.IsSelsected)
+                    {
+                        productChoosenP.Add(product);
+                    }
+                }
+                foreach (Accessory product in DicAccessories.Values)
+                {
+                    if (product.IsSelsected)
+                    {
+                        productChoosenA.Add(product);
+                    }
+                }
+                Menu.Pizzas = productChoosenP;
+                Menu.Accesories = productChoosenA;
+                MenuHandler mH = new MenuHandler();
+                mH.Update(Menu, Menu.Id);
+                return RedirectToPage("MenuTable");
             }
-
-            MenuHandler mH = new MenuHandler();
-            mH.Update(Menu, Menu.Id);
-
-            return RedirectToPage("MenuTable");
-
+            return Page();
         }
     }
-
 }

@@ -1,19 +1,21 @@
 {
-  "532a95b2-8f16-4c62-a537-0d9c1330fb1c": {
-    "Pizzas": [],
-    "Accesories": [],
-    "Id": "532a95b2-8f16-4c62-a537-0d9c1330fb1c",
-    "IsSelsected": false,
-    "Price": 123.0,
-    "ProductName": "virker"
-  },
   "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d": {
-    "Pizzas": [],
+    "Pizzas": [
+      {
+        "Size": 0,
+        "Topping": null,
+        "Ingrediense": "mange ing",
+        "Id": "19ce8ca6-edc1-415e-9071-abe4dcb13ce8",
+        "IsSelsected": true,
+        "Price": 12.0,
+        "ProductName": "stor"
+      }
+    ],
     "Accesories": [],
     "Id": "4e47de5e-8cc1-4e15-a3d1-01a6eea0d93d",
     "IsSelsected": false,
-    "Price": 123.0,
-    "ProductName": "lsi"
+    "Price": 1234.0,
+    "ProductName": "lsitesterlige12345"
   },
   "73d2f7d0-6e8b-4f83-88e5-6028c821127d": {
     "Pizzas": [],

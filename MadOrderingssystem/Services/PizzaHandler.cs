@@ -10,7 +10,7 @@ namespace MadOrderingssystem.Services
 {
     public class PizzaHandler : IManagement<Pizza>
     {
-        private string filePath = @"C:\Users\mukke\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
+        private string filePath = @"D:\Documents\GitHub\Big_mama_Semester_projekt\MadOrderingssystem\Data\DataPizza.json";
         public void Create(Pizza pizza)
         {
             JsonPizza jsonPizza = new JsonPizza();

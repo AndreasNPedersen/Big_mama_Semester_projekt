@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bHHw+FEyLo5R1FPwCWzQZZ978F+PFqtgMnJzu9C4wHazu6BAFeAedqlk2R0JhgPr/8sm4zltduwXPv7h2GcU7g==",
+  "dgSpecHash": "b2hsnPfAOVL+JRVzsxFl7GPbidBuBcZ5+VdLZJ5Ph3PRyVveY0hsg6fu/zX/EHud0TkkrQV0LPDOQ0ADfCzteA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mukke\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
+  "projectFilePath": "D:\\Documents\\GitHub\\Big_mama_Semester_projekt\\MadOrderingssystem\\MadOrderingssystem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mukke\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\trium\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
