@@ -3,7 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MadOrderingssystem.Models
 {
-    //Andreas
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public enum Roles
     {
         SalesPerson,

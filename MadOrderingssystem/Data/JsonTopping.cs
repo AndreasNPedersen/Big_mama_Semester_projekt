@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Data
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class JsonTopping
     {
         public Dictionary<string, Toppings> ReadJsonFile(string filePath)

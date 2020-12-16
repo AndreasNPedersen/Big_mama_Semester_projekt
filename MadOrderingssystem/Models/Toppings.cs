@@ -1,5 +1,9 @@
 ﻿namespace MadOrderingssystem.Models
 {
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: 
+    */
     public class Toppings : Product
     {
 

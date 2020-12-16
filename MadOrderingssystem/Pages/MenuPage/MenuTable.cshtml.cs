@@ -11,6 +11,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class MenuTableModel : PageModel
     {
         public Dictionary<string, Toppings> DicTopping { get; set; }

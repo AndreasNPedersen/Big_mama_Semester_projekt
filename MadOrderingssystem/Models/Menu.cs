@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
+    /*
+     * Lavet af:    Mikkel
+     * Bidraget af: 
+    */
     public class Menu  : Product
     {
-        //Mikkel
+        
         //Skal indeholde
         //Pizzas, Accesories
         public List<Pizza> Pizzas{get; set;}

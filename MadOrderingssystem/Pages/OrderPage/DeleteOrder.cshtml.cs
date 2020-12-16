@@ -8,6 +8,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.OrderPage
 {
+    /*
+     * Lavet af:    Mikkel
+     * Bidraget af: 
+    */
     public class DeleteOrderModel : PageModel
     {
         public Customer CustomerSession { get; set; }

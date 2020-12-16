@@ -11,6 +11,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: Andreas
+    */
     public class EditMenuModel : PageModel
     {
 

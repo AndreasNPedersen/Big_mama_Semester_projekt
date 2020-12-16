@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Services
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: Mikkel
+    */
     public class ToppingHandler : IManagement<Toppings>
     {
 

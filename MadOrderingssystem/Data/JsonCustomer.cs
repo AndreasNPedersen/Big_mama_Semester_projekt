@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Data
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class JsonCustomer
     {
+
         public Dictionary<string, Customer> ReadJsonFile(string filePath)
         {
             string input = File.ReadAllText(filePath);

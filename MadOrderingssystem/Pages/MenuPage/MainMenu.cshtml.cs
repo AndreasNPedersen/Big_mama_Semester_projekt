@@ -12,11 +12,15 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: Aleksandar
+    */
     public class MainMenuModel : PageModel
     {
+
         public Dictionary<string, Pizza> DicPizza { get; set; }
         public Dictionary<string, Menu> DicMenu { get; set; }
-        [BindProperty]
         public Dictionary<string, Accessory> DicAccessories { get; set; }
         public Dictionary<string, Toppings> DicToppings { get; set; }
         private DateTime DateTimeNow { get; set; }
@@ -38,7 +42,7 @@ namespace MadOrderingssystem.Pages.MenuPage
             DicPizza = new PizzaHandler().GetDictionary();
             
             // checks the time for the alcohol to show
-            if (DateTimeNow.Hour < 22 || DateTimeNow.Hour > 5) { AlcoholTime = true; }
+            if (DateTimeNow.Hour > 22 || DateTimeNow.Hour < 5) { AlcoholTime = true; }
             foreach(Accessory accessory in DicAccessories.Values)
             {
                 if (AlcoholTime == true)
@@ -75,8 +79,7 @@ namespace MadOrderingssystem.Pages.MenuPage
         
         public IActionResult OnPostBuya(string id)
         {
-            //lav dette i onGet metode
-            //lav hvert object kald objected i button, save det, add det
+            
             DicMenu = new MenuHandler().GetDictionary();
             DicAccessories = new AccessoryHandler().GetDictionary();
             DicToppings = new ToppingHandler().GetDictionary();
@@ -97,8 +100,7 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public IActionResult OnPostBuyp(string id)
         {
-            //lav dette i onGet metode
-            //lav hvert object kald objected i button, save det, add det
+            
             DicMenu = new MenuHandler().GetDictionary();
             DicAccessories = new AccessoryHandler().GetDictionary();
             DicToppings = new ToppingHandler().GetDictionary();
@@ -119,8 +121,7 @@ namespace MadOrderingssystem.Pages.MenuPage
 
         public IActionResult OnPostBuym(string id)
         {
-            //lav dette i onGet metode
-            //lav hvert object kald objected i button, save det, add det
+            
             DicMenu = new MenuHandler().GetDictionary();
             DicAccessories = new AccessoryHandler().GetDictionary();
             DicToppings = new ToppingHandler().GetDictionary();

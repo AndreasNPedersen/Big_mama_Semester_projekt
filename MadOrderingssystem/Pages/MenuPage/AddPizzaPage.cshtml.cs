@@ -11,6 +11,10 @@ using Microsoft.AspNetCore.Http;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: 
+    */
     public class AddPizzaPageModel : PageModel
     {
        

@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: 
+    */
     public class Pizza : Product
     {
         

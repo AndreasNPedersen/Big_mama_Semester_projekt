@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
+	/*
+     * Lavet af:    Mikkel
+     * Bidraget af: 
+    */
 	public class Order
 	{
-		//Mikkel
+		
 		//Skal indeholde
 		//Guid id,(List) Products, Customer, TotalPrice
 		public string ID { get; set; }

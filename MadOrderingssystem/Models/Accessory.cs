@@ -5,8 +5,13 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: 
+    */
     public class Accessory : Product
     {
+
         public bool IsAlcohol { get; set; }
         public Accessory() { } //default constructor
 

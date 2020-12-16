@@ -11,7 +11,7 @@ namespace MadOrderingssystem.Services
     /*
      * The Handler that either gets or sets a customer (CRUD operations)
      * The Data handler
-     * -Andreas
+     * Lavet af: Andreas
     */
     public class CustomerHandler
     {

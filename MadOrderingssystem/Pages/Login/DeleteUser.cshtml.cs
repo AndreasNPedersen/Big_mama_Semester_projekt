@@ -8,6 +8,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.Login
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class DeleteUserModel : PageModel
     {
         [BindProperty]

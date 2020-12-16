@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Models
 {
-    
-        public enum Size
+    /*
+     * Lavet af:    Aleksandar
+     * Bidraget af: 
+    */
+    public enum Size
             {
             Lille,
             Stor,

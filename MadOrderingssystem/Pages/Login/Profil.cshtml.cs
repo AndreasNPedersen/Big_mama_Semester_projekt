@@ -10,6 +10,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.Login
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class ProfilModel : PageModel
     {
     public Customer CustomerSession { get; set; }

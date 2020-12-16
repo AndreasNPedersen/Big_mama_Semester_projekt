@@ -11,6 +11,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.OrderPage
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: Mikkel
+    */
     public class AddOrderModel : PageModel
     {
         [BindProperty]

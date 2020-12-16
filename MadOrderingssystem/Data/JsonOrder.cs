@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace MadOrderingssystem.Data
 {
+    /*
+     * Lavet af:    Andreas
+     * Bidraget af: 
+    */
     public class JsonOrder
     {
         public Dictionary<string, Order> ReadJsonFile(string filePath)

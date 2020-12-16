@@ -8,6 +8,10 @@ using Microsoft.Extensions.Logging;
 
 namespace MadOrderingssystem.Pages
 {
+    /*
+     * Lavet af:    Mikkel
+     * Bidraget af: Andreas
+    */
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;

@@ -7,7 +7,7 @@ namespace MadOrderingssystem.Interfaces
 {
     /*
      * CRUD operations with a GetAll dictionary and a filter list
-     * -Andreas
+     * lavet af: Andreas
     */
     interface IManagement<T>
     {

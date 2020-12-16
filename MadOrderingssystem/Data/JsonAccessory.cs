@@ -9,9 +9,8 @@ using Newtonsoft.Json;
 namespace MadOrderingssystem.Data
 {
     /*
-     * A basic Json Reader and Writer, that takes a Dictionary with objects
-     * only needs a dictionary and a file path
-     * -Andreas
+     * Lavet af:    Andreas
+     * Bidraget af: 
     */
     public class JsonAccessory
     {

@@ -11,6 +11,10 @@ using Newtonsoft.Json;
 
 namespace MadOrderingssystem.Pages.MenuPage
 {
+    /*
+     * Lavet af:    Mikkel
+     * Bidraget af: 
+    */
     public class DeleteMenuModel : PageModel
     {
         public Customer CustomerSession { get; set; }
