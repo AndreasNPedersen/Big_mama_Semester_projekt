@@ -208,5 +208,31 @@
     },
     "TotalPrice": 2097.7999999999997,
     "BuyTakeAway": false
+  },
+  "3d9d2fb1-5e6c-4716-8bb2-8a5570b1256c": {
+    "ID": "3d9d2fb1-5e6c-4716-8bb2-8a5570b1256c",
+    "products": [
+      {
+        "Id": "bd4afca6-3313-4e83-95f8-50b012b2fb2f",
+        "IsSelsected": false,
+        "Price": 100.0,
+        "ProductName": "Alkohol"
+      }
+    ],
+    "customer": {
+      "Name": "asd",
+      "LastName": "asd",
+      "Email": "asd",
+      "Password": null,
+      "Address": "asd",
+      "PhoneNumber": "asd",
+      "PostNumber": 1,
+      "ID": "d7af4b89-2f7a-43a8-879f-3fbf6fe1f083",
+      "Role": 1,
+      "CustomerDiscount": true,
+      "Date": "2020-12-11T16:24:22"
+    },
+    "TotalPrice": 85.0,
+    "BuyTakeAway": false
   }
 }

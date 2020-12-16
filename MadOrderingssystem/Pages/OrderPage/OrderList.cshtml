@@ -36,28 +36,31 @@
             <tbody>
                 @foreach (Order order in Model.OrderListTable.Values)
                 {
-                    <tr>
-                        <td>
-                            @order.ID
-                        </td>
-                        <td>
-                            <ul>
-                                @foreach (Product products in order.products)
-                                {
-                                    <li>@products.ProductName</li>
-                                }
-                            </ul>
-                        </td>
-                        <td>
-                            @order.TotalPrice
-                        </td>
-                        <td>
-                            <p>
-                                <a asp-page="EditOrder" asp-route-id="@order.ID">Redigere</a> |
-                                <a asp-page="DeleteOrder" asp-route-id="@order.ID">Slet</a>
-                            </p>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        @order.ID
+                    </td>
+                    <td>
+                        <ul>
+                            @foreach (Product products in order.products)
+                            {
+                                <li>@products.ProductName</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        @order.customer.Name
+                    </td>
+                    <td>
+                        @order.TotalPrice
+                    </td>
+                    <td>
+                        <p>
+                            <a asp-page="EditOrder" asp-route-id="@order.ID">Redigere</a> |
+                            <a asp-page="DeleteOrder" asp-route-id="@order.ID">Slet</a>
+                        </p>
+                    </td>
+                </tr>
                 }
             </tbody>
 

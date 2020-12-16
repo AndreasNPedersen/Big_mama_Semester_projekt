@@ -42,7 +42,7 @@ namespace MadOrderingssystem.Pages.MenuPage
                 AccessoryHandler aH = new AccessoryHandler();
                 aH.Create(Accessory);
 
-                //return RedirectToPage("MenuTable");
+                return RedirectToPage("MenuTable");
                 
             }   
             return Page();

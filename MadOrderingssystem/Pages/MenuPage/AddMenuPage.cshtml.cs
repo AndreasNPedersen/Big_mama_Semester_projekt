@@ -62,7 +62,7 @@ namespace MadOrderingssystem.Pages.MenuPage
                 Menu.Accesories = productChoosenA;
                 MenuHandler mH = new MenuHandler();
                 mH.Create(Menu);
-                return Page();
+                return RedirectToPage("MenuTable");
             }
             return Page();
         }

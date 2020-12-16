@@ -25,5 +25,14 @@
     "IsSelsected": false,
     "Price": 12.0,
     "ProductName": "stor"
+  },
+  "a560da8a-4e6c-48a7-a36c-7dc163c0613c": {
+    "Size": 0,
+    "Topping": null,
+    "Ingrediense": "hej",
+    "Id": "a560da8a-4e6c-48a7-a36c-7dc163c0613c",
+    "IsSelsected": false,
+    "Price": 100.0,
+    "ProductName": "hej"
   }
 }

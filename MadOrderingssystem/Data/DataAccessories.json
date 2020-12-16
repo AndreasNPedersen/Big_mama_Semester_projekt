@@ -7,17 +7,17 @@
     "ProductName": "accessory1 flase"
   },
   "81e5b75e-dd2b-432b-93c0-2d7648327f15": {
-    "IsAlcohol": true,
+    "IsAlcohol": false,
     "Id": "81e5b75e-dd2b-432b-93c0-2d7648327f15",
     "IsSelsected": false,
     "Price": 123.0,
-    "ProductName": "accessory1 true"
+    "ProductName": "accessory1 trueyes"
   },
-  "d076e69d-bf7b-4df4-885c-41677383602f": {
-    "IsAlcohol": false,
-    "Id": "d076e69d-bf7b-4df4-885c-41677383602f",
+  "bd4afca6-3313-4e83-95f8-50b012b2fb2f": {
+    "IsAlcohol": true,
+    "Id": "bd4afca6-3313-4e83-95f8-50b012b2fb2f",
     "IsSelsected": false,
-    "Price": 10.0,
-    "ProductName": "cola"
+    "Price": 100.0,
+    "ProductName": "Alkohol"
   }
 }
